@@ -1,0 +1,19 @@
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+>
+	<CONTEXT alias="9D70B072-BDD3-DE37-E0FD-8EAE70BDDD64.task.app">
+		<folder name="Aprobar Marco del Proyecto V2 Details" description="Aprobar Marco del Proyecto V2 Details" alias="9D70B072-BDD3-DE37-E0FD-8EAE70BDDD64.task.app.details.page" isTaskFolder="false">
+            <page>
+            	<row>
+            		<column>
+            			<crearmarcologicotasks___aprobarmarcodelproyectov2overview name="Task View" alias="9D70B072-BDD3-DE37-E0FD-8EAE70BDDD64.task.app.details.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+            			</crearmarcologicotasks___aprobarmarcodelproyectov2overview> 
+                    </column>
+                </row>
+                <hobos/>
+            </page>
+        </folder>
+    </CONTEXT>
+</CONFIG>

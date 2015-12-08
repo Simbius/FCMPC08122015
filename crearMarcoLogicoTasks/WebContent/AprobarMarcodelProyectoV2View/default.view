@@ -1,0 +1,898 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='AprobarMarcodelProyectoV2ViewDefaultviewView' />
+  <property name='preferencesBean' value='AprobarMarcodelProyectoV2View' />
+  <design-time-attribute name='taskTypeID' value='9D70B072-BDD3-DE37-E0FD-8EAE70BDDD64' />
+  <design-time-attribute name='taskPortletType' value='taskView' />
+  <design-time-attribute name='portlet' value='AprobarMarcodelProyectoV2View' />
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='taskViewForm' />
+    <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='globalOnly' value='true' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+      <property name='id' value='taskDataSubGroup' />
+      <property name='label' value='   ' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+        <property name='id' value='propertyGroup' />
+        <property name='label' value='Marco Logico' />
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='id' value='propertyLine' />
+          <property name='label' value='Nombre Proyecto' />
+          <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='htmlInputText' />
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.nombrePro}' />
+            <property name='width' value='input20' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='id' value='propertyLine9' />
+          <property name='label' value='Objetivo General' />
+          <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='htmlInputText5' />
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.objetivoGeneral}' />
+            <property name='width' value='input20' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+          <property name='footerClass' value='portlet-section-footer' />
+          <property name='headerClass' value='portlet-section-subheader' />
+          <property name='id' value='asyncTable4' />
+          <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+          <property name='rows' value='10' />
+          <property name='selectedRowClass' value='portlet-section-selected' />
+          <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.objetivo}' />
+          <property name='var' value='objetivo' />
+          <property name='width' value='100%' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText' />
+              <property name='raw' value='true' />
+              <property name='value' value='Objetivo' />
+            </control>
+          </facet>
+          <facet name='footer'>
+            <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+              <property name='id' value='prevNext' />
+              <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                <property name='id' value='blockPanel' />
+                <property name='style' value='text-align:center;' />
+                <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                  <property name='id' value='dataTotal' />
+                </control>
+              </control>
+            </control>
+          </facet>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn' />
+            <property name='label' value='osupuestos' />
+            <property name='sort' value='#{objetivo.osupuestos}' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText1' />
+                <property name='raw' value='true' />
+                <property name='value' value='Supuestos' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText2' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.oindicador}' />
+            </control>
+            <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+              <property name='footerClass' value='portlet-section-footer' />
+              <property name='headerClass' value='portlet-section-subheader' />
+              <property name='id' value='asyncTable' />
+              <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+              <property name='rows' value='10' />
+              <property name='selectedRowClass' value='portlet-section-selected' />
+              <property name='value' value='#{objetivo.osupuestos}' />
+              <property name='var' value='osupuesto' />
+              <property name='width' value='100%' />
+              <facet name='header'>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='Supuestos' />
+                </control>
+              </facet>
+              <facet name='footer'>
+                <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+                  <property name='id' value='prevNext' />
+                  <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                    <property name='id' value='blockPanel' />
+                    <property name='style' value='text-align:center;' />
+                    <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                      <property name='id' value='dataTotal' />
+                    </control>
+                  </control>
+                </control>
+              </facet>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn' />
+                <property name='label' value='Osupuestos[i]' />
+                <property name='sort' value='#{osupuesto}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText1' />
+                    <property name='raw' value='true' />
+                    <property name='value' value=' ' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText2' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{osupuesto}' />
+                </control>
+              </control>
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn1' />
+            <property name='label' value='omv' />
+            <property name='sort' value='#{objetivo.omv}' />
+            <property name='valign' value='top' />
+            <property name='width' value='138px' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText3' />
+                <property name='raw' value='true' />
+                <property name='value' value='Medio Valoracion' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText4' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.omv}' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn2' />
+            <property name='label' value='ovalor' />
+            <property name='sort' value='#{objetivo.ovalor}' />
+            <property name='valign' value='top' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText5' />
+                <property name='raw' value='true' />
+                <property name='value' value='Valor' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText6' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.ovalor}' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn3' />
+            <property name='label' value='olineaBase' />
+            <property name='sort' value='#{objetivo.olineaBase}' />
+            <property name='valign' value='top' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText7' />
+                <property name='raw' value='true' />
+                <property name='value' value='Linea Base' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText8' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.olineaBase}' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn4' />
+            <property name='label' value='oano1' />
+            <property name='sort' value='#{objetivo.oano1}' />
+            <property name='valign' value='top' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText9' />
+                <property name='raw' value='true' />
+                <property name='value' value='A&#241;o 1' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText10' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.oano1}' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn5' />
+            <property name='label' value='oano2' />
+            <property name='sort' value='#{objetivo.oano2}' />
+            <property name='valign' value='top' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText11' />
+                <property name='raw' value='true' />
+                <property name='value' value='A&#241;o 1' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText12' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivo.oano2}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+          <property name='footerClass' value='portlet-section-footer' />
+          <property name='headerClass' value='portlet-section-subheader' />
+          <property name='id' value='asyncTable5' />
+          <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+          <property name='rows' value='10' />
+          <property name='selectedRowClass' value='portlet-section-selected' />
+          <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.objetivosEspecificos}' />
+          <property name='var' value='objetivosEspecifico' />
+          <property name='width' value='100%' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText' />
+              <property name='raw' value='true' />
+              <property name='value' value='Objetivos Especificos' />
+            </control>
+          </facet>
+          <facet name='footer'>
+            <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+              <property name='id' value='prevNext' />
+              <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                <property name='id' value='blockPanel' />
+                <property name='style' value='text-align:center;' />
+                <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                  <property name='id' value='dataTotal' />
+                </control>
+              </control>
+            </control>
+          </facet>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn' />
+            <property name='label' value='componente' />
+            <property name='sort' value='#{objetivosEspecifico.componente}' />
+            <property name='valign' value='top' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText1' />
+                <property name='raw' value='true' />
+                <property name='value' value='Componente' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText2' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivosEspecifico.componente}' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn1' />
+            <property name='label' value='especificos' />
+            <property name='sort' value='#{objetivosEspecifico.especificos}' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText3' />
+                <property name='raw' value='true' />
+                <property name='value' value='especificos' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText4' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivosEspecifico.nombreObjetivo}' />
+            </control>
+            <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+              <property name='footerClass' value='portlet-section-footer' />
+              <property name='headerClass' value='portlet-section-subheader' />
+              <property name='id' value='asyncTable' />
+              <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+              <property name='rows' value='10' />
+              <property name='selectedRowClass' value='portlet-section-selected' />
+              <property name='value' value='#{objetivosEspecifico.especificos}' />
+              <property name='var' value='especifico' />
+              <property name='width' value='100%' />
+              <facet name='header'>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='Especificos' />
+                </control>
+              </facet>
+              <facet name='footer'>
+                <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+                  <property name='id' value='prevNext' />
+                  <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                    <property name='id' value='blockPanel' />
+                    <property name='style' value='text-align:center;' />
+                    <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                      <property name='id' value='dataTotal' />
+                    </control>
+                  </control>
+                </control>
+              </facet>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn' />
+                <property name='label' value='valor' />
+                <property name='sort' value='#{especifico.valor}' />
+                <property name='valign' value='top' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText1' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Valor' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText2' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.valor}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn1' />
+                <property name='label' value='rsupuestos' />
+                <property name='sort' value='#{especifico.rsupuestos}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText3' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='rsupuestos' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText4' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.kindicador}' />
+                </control>
+                <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+                  <property name='footerClass' value='portlet-section-footer' />
+                  <property name='headerClass' value='portlet-section-subheader' />
+                  <property name='id' value='asyncTable1' />
+                  <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+                  <property name='rows' value='10' />
+                  <property name='selectedRowClass' value='portlet-section-selected' />
+                  <property name='value' value='#{especifico.rsupuestos}' />
+                  <property name='var' value='rsupuesto' />
+                  <property name='width' value='100%' />
+                  <facet name='header'>
+                    <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                      <property name='id' value='htmlOutputText' />
+                      <property name='raw' value='true' />
+                      <property name='value' value='Supuestos' />
+                    </control>
+                  </facet>
+                  <facet name='footer'>
+                    <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+                      <property name='id' value='prevNext' />
+                      <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                        <property name='id' value='blockPanel' />
+                        <property name='style' value='text-align:center;' />
+                        <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                          <property name='id' value='dataTotal' />
+                        </control>
+                      </control>
+                    </control>
+                  </facet>
+                  <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                    <property name='id' value='htmlTableColumn' />
+                    <property name='label' value='Rsupuestos[i]' />
+                    <property name='sort' value='#{rsupuesto}' />
+                    <facet name='header'>
+                      <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                        <property name='id' value='htmlOutputText1' />
+                        <property name='raw' value='true' />
+                      </control>
+                    </facet>
+                    <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                      <property name='id' value='htmlOutputText2' />
+                      <property name='raw' value='true' />
+                      <property name='value' value='#{rsupuesto}' />
+                    </control>
+                  </control>
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn2' />
+                <property name='label' value='mv' />
+                <property name='sort' value='#{especifico.mv}' />
+                <property name='valign' value='top' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText5' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Medio Valoracion' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText6' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.mv}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn3' />
+                <property name='label' value='lineaBase' />
+                <property name='sort' value='#{especifico.lineaBase}' />
+                <property name='valign' value='top' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText7' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Linea Base' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText8' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.lineaBase}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn4' />
+                <property name='label' value='ano1' />
+                <property name='sort' value='#{especifico.ano1}' />
+                <property name='valign' value='top' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText9' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='A&#241;o 1' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText10' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.ano1}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn5' />
+                <property name='label' value='ano2' />
+                <property name='sort' value='#{especifico.ano2}' />
+                <property name='valign' value='top' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText11' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='A&#241;o 2' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText12' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{especifico.ano2}' />
+                </control>
+              </control>
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn2' />
+            <property name='label' value='estrategia' />
+            <property name='sort' value='#{objetivosEspecifico.estrategia}' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText5' />
+                <property name='raw' value='true' />
+                <property name='value' value='estrategia' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText6' />
+              <property name='raw' value='true' />
+              <property name='value' value='#{objetivosEspecifico.descripcionObjetivo}' />
+            </control>
+            <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+              <property name='footerClass' value='portlet-section-footer' />
+              <property name='headerClass' value='portlet-section-subheader' />
+              <property name='id' value='asyncTable1' />
+              <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+              <property name='rows' value='10' />
+              <property name='selectedRowClass' value='portlet-section-selected' />
+              <property name='value' value='#{objetivosEspecifico.estrategia}' />
+              <property name='var' value='estrategia' />
+              <property name='width' value='100%' />
+              <facet name='header'>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='Estrategia' />
+                </control>
+              </facet>
+              <facet name='footer'>
+                <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+                  <property name='id' value='prevNext' />
+                  <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                    <property name='id' value='blockPanel' />
+                    <property name='style' value='text-align:center;' />
+                    <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                      <property name='id' value='dataTotal' />
+                    </control>
+                  </control>
+                </control>
+              </facet>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn' />
+                <property name='label' value='tipoActividad' />
+                <property name='sort' value='#{estrategia.tipoActividad}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText1' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Tipo Actividad' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText2' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.tipoActividad}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn1' />
+                <property name='label' value='nombreActividad' />
+                <property name='sort' value='#{estrategia.nombreActividad}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText3' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Nombre Actividad' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText4' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.nombreActividad}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn2' />
+                <property name='label' value='categoria' />
+                <property name='sort' value='#{estrategia.categoria}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText5' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Categoria' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText6' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.categoria}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn3' />
+                <property name='label' value='area' />
+                <property name='sort' value='#{estrategia.area}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText7' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Area' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText8' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.area}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn4' />
+                <property name='label' value='nivel' />
+                <property name='sort' value='#{estrategia.nivel}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText9' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Nivel' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText10' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.nivel}' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+                <property name='id' value='htmlTableColumn5' />
+                <property name='label' value='contenidos' />
+                <property name='sort' value='#{estrategia.contenidos}' />
+                <facet name='header'>
+                  <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                    <property name='id' value='htmlOutputText11' />
+                    <property name='raw' value='true' />
+                    <property name='value' value='Contenidos' />
+                  </control>
+                </facet>
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText12' />
+                  <property name='raw' value='true' />
+                  <property name='value' value='#{estrategia.contenidos}' />
+                </control>
+              </control>
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+          <design-time-attribute name='rolledUp' value='false' />
+          <property name='height' value='25px' />
+          <property name='id' value='staticRow1' />
+          <property name='width' value='728px' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell3' />
+            <property name='width' value='333px' />
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell4' />
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell5' />
+            <property name='width' value='664px' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+          <design-time-attribute name='rolledUp' value='false' />
+          <property name='id' value='staticRow10' />
+          <property name='width' value='728px' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell11' />
+            <property name='width' value='333px' />
+            <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+              <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.actionAprobar}' signature='java.lang.String action()' />
+              <property name='id' value='htmlCommandButton' />
+              <property name='value' value='Aprobar' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell1' />
+            <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+              <property name='for' value='taskViewForm:inlineHideablePanel' />
+              <property name='id' value='oneWayToggleButton' />
+              <property name='value' value='Rechazar' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell' />
+            <property name='width' value='664px' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.InlineHideablePanel'>
+          <property name='id' value='inlineHideablePanel' />
+          <property name='visible' value='false' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+            <property name='id' value='staticRow' />
+            <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+              <property name='id' value='staticCell2' />
+              <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+                <property name='id' value='propertyLine11' />
+                <property name='label' value='Observaciones' />
+                <control component-type='com.webmethods.caf.faces.standard.HtmlInputTextarea' renderer-type='com.webmethods.caf.faces.Textarea'>
+                  <property name='id' value='htmlInputText7' />
+                  <property name='rows' value='5' />
+                  <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.observacionesML}' />
+                  <property name='width' value='input20' />
+                </control>
+                <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+                  <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.actionReprobar}' signature='java.lang.String action()' />
+                  <property name='id' value='htmlCommandButton1' />
+                  <property name='value' value='Confirmar' />
+                </control>
+              </control>
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='for' value=':taskViewForm:optionalPanel' />
+      <property name='rendered' value='false' />
+      <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.toggle.task.info&quot;]}' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='id' value='optionalPanel' />
+      <property name='rendered' value='false' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+        <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.task.info&quot;]}' />
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.name&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='nameText' />
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.name}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.description&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='descriptionText' />
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.description}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.created.on&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.createdDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat1' />
+            <property name='style' value='padding-left: 0.5em;&#13;&#10;' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.createdByDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.last.modified&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.lastModifiedDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat2' />
+            <property name='style' value='padding-left:0.5em' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.lastModifiedDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expires&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.expireDate}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.status&quot;]}' />
+          <control component-type='com.webmethods.caf.faces.select.SelectOneOutput' renderer-type='com.webmethods.caf.faces.select.SelectOneOutput'>
+            <property name='id' value='statusText' />
+            <property name='value' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.status}' />
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='activeStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.active&quot;]}' />
+              <property name='itemValue' value='active' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='cancelledStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.canceled&quot;]}' />
+              <property name='itemValue' value='cancelled' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='completedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.completed&quot;]}' />
+              <property name='itemValue' value='completed' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='errorStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.error&quot;]}' />
+              <property name='itemValue' value='error' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='expiredStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expired&quot;]}' />
+              <property name='itemValue' value='expired' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='suspendedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.suspended&quot;]}' />
+              <property name='itemValue' value='suspended' />
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertySubmit' renderer-type='com.webmethods.caf.faces.panel.PropertySubmit'>
+      <design-time-attribute name='rolledUp' value='false' />
+      <property name='rendered' value='false' />
+      <facet name='submit'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.submitTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.autoAccept || AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.submit&quot;]}' />
+        </control>
+      </facet>
+      <facet name='cancel'>
+        <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+          <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.cancelView}' signature='java.lang.String action()' />
+          <property name='rendered' value='#{not empty activePreferencesBean.finishUrl}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.return&quot;]}' />
+        </control>
+      </facet>
+      <facet name='previous'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.acceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.autoAccept &amp;&amp; !AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.accept&quot;]}' />
+        </control>
+      </facet>
+      <facet name='next'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.unacceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.autoAccept &amp;&amp; AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.release&quot;]}' />
+        </control>
+      </facet>
+      <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+        <property name='action' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.completeTask}' signature='java.lang.String action()' />
+        <property name='disabled' value='#{not AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='rendered' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.autoAccept || AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.taskInfo.currentUserAccepted}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.complete&quot;]}' />
+      </control>
+      <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+        <property name='disabled' value='#{not AprobarMarcodelProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='for' value=':assignToForm:assignedPrincipalPicker' />
+        <property name='id' value='toggleAssignedPrincipalPicker' />
+        <property name='rendered' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.adhocRouting}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.assign.users&quot;]}' />
+        <property name='way' value='show' />
+      </control>
+    </control>
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='assignToForm' />
+    <property name='rendered' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.aprobarMarcodelProyectoV2.adhocRouting}' />
+    <control component-type='com.softwareag.caf.controls.mwsx.PeoplePickerDialog' renderer-type=''>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='applyButtonAction' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.assignToPrincipals}' signature='java.lang.String action()' />
+      <property name='groupSearchAllowed' value='false' />
+      <property name='id' value='assignedPrincipalPicker' />
+      <property name='lazy' value='' />
+      <property name='progressDelay' value='' />
+      <property name='refreshOnShow' value='' />
+      <property name='suppressInputs' value='' />
+      <property name='targetValue' value='#{AprobarMarcodelProyectoV2ViewDefaultviewView.principalList}' />
+      <property name='twoPass' value='' />
+      <facet name='popupPanel'>
+        <control component-type='javax.faces.NamingContainer' renderer-type=''>
+          <property name='id' value='assignTargetPickerPopup' />
+          <control component-type='com.webmethods.caf.faces.command.async.Link' renderer-type='com.webmethods.caf.faces.command.async.Link'>
+            <property name='id' value='showAvailability' />
+            <property name='onclick' value='CAF.Popup.hideAll();' />
+            <property name='refresh' value='personCalendarDialog' />
+            <property name='toggle' value='personCalendarDialog' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.show.availability&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='name' value='personURI' />
+              <property name='value' value='#{row.principalURI}' />
+            </control>
+          </control>
+        </control>
+      </facet>
+    </control>
+    <control component-type='com.softwareag.caf.controls.mwsx.PersonCalendarDialog' renderer-type=''>
+      <property name='id' value='personCalendarDialog' />
+      <property name='personURI' value='#{param.personURI}' />
+    </control>
+  </control>
+</view>

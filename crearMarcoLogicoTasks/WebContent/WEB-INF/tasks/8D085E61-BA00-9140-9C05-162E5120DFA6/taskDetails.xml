@@ -1,0 +1,19 @@
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+>
+	<CONTEXT alias="8D085E61-BA00-9140-9C05-162E5120DFA6.task.app">
+		<folder name="Ajustar Marco Proyecto V2 Details" description="Ajustar Marco Proyecto V2 Details" alias="8D085E61-BA00-9140-9C05-162E5120DFA6.task.app.details.page" isTaskFolder="false">
+            <page>
+            	<row>
+            		<column>
+            			<crearmarcologicotasks___ajustarmarcoproyectov2overview name="Task View" alias="8D085E61-BA00-9140-9C05-162E5120DFA6.task.app.details.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+            			</crearmarcologicotasks___ajustarmarcoproyectov2overview> 
+                    </column>
+                </row>
+                <hobos/>
+            </page>
+        </folder>
+    </CONTEXT>
+</CONFIG>

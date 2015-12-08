@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wm-portlet-app version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/wm-portlet-app.xsd">
+	<wm-portlet>
+		<portlet-name>generarProyecto</portlet-name>
+		<category>fcmpcProyecto</category>
+	</wm-portlet>
+	<wm-portlet>
+		<portlet-name>marcoPresenta</portlet-name>
+		<category>fcmpcProyecto</category>
+	</wm-portlet>
+	<wm-portlet>
+		<portlet-name>crearProyecto</portlet-name>
+		<category>fcmpcProyecto</category>
+	</wm-portlet></wm-portlet-app>
+

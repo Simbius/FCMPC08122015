@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessProcessDiagram xmlns="http://www.webmethods.com/bpm/2006/"
+  Id="4de1c2a0-e452-42dc-82b6-a64ad226c86e" bpmnStyle="false" build="1"
+  canvasPool="1" creator="veztm" description=""
+  failProcessOnStepFailure="false" focalRole="Focal role"
+  name="crearMarcoLogico" processCategory="" rnSync="false"
+  runtimeVersion="1" transitionLabelPref="expression"
+  unSynchJoinDeadPath="true" version="9.8.0">
+  <kpiDimensions/>
+  <systemKPIs>
+    <systemKPI Id="" description="" name="Volume" unitOfMeasure=""/>
+    <systemKPI Id="" description="" name="Cycle Time" unitOfMeasure=""/>
+    <systemKPI Id="" description="" name="Error Count" unitOfMeasure=""/>
+  </systemKPIs>
+  <logicalDataItem Id="4d81e7cb-c7f4-489e-a787-65af06270b2d"
+    description="" dimension="0" label="publicaMarcoV1"
+    name="{ProcessNamespace}publicaMarcoV1" type="{sFCMPC.docs}publicaMarcoV1"/>
+  <logicalDataItem Id="2fb9a808-2a66-4b1b-ad05-0b390704bca3"
+    description="" dimension="0"
+    label="Aprobar Marco del ProyectoInputEnv"
+    name="{ProcessNamespace}Aprobar Marco del ProyectoInputEnv" type="{pub.task}TaskQueueInfo"/>
+  <logicalDataItem Id="965dbd63-4796-4c3a-9073-11795455a8ac"
+    description="" dimension="0"
+    label="Aprobar Marco del ProyectoOutputEnv"
+    name="{ProcessNamespace}Aprobar Marco del ProyectoOutputEnv" type="{pub.task}TaskCompletionInfo"/>
+  <logicalDataItem Id="8a17e8b6-80ff-45ce-8a9d-b7f34087b825"
+    description="" dimension="0" label="AjustarMarcoProyectoInputEnv"
+    name="{ProcessNamespace}AjustarMarcoProyectoInputEnv" type="{pub.task}TaskQueueInfo"/>
+  <logicalDataItem Id="ebebcf0c-19d0-4f4e-906c-47f772b6f8db"
+    description="" dimension="0" label="AjustarMarcoProyectoOutputEnv"
+    name="{ProcessNamespace}AjustarMarcoProyectoOutputEnv" type="{pub.task}TaskCompletionInfo"/>
+  <logicalDataItem Id="" description="" dimension="0"
+    label="ProcessData" name="{ProcessNamespace}ProcessData" type="{pub.prt}ProcessData"/>
+  <timeout calendarAlias="" calendarTime="0:0:0"
+    dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+    dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+    dynamicFieldName="" isCalendarTimeout="false" isStaticTimeout="true"
+    isXPathTimeout="false" pipelineCalendarAlias=""
+    pipelineCalendarDays="" pipelineCalendarHours=""
+    pipelineCalendarMinutes="" timeoutStyle="RELATIVE"
+    timeoutType="processTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+  <pool Id="cd822002-f735-459f-9164-548524348596" blue="128"
+    containerType="BPMN_SUBPROCESS" external="true"
+    externalizeConditions="false" green="128" isCollapsed="false"
+    isCompensating="false" isTestAfter="false" label="  "
+    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
+    loopMaximum="0" loopMaximumField="" name="5"
+    orientation="horizontal" red="128" retryCount="0" stepLock="false"
+    uid="P6" useCorrelation="false">
+    <documentation/>
+    <businessKPIs/>
+    <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    <invokeStep Id="5b6a7066-a092-4a87-9d0e-23ee8f78c993"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="" invokeId="" invokeLocation=""
+      invokeName="" invokeType="EMPTY" isCompensating="false"
+      isTestAfter="false" label="Carga Marco Proyecto" labelHeight="-1"
+      labelWidth="-1" logicalServer="Default" loopMaximum="0"
+      loopMaximumField="" retryCount="0" routingRuleSet=""
+      ruleType="WMRULE" stepLock="false" uid="S8" useCorrelation="false"
+      width="93" x="33" y="49">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <wmExpression/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
+    <timeout calendarAlias="" calendarTime="0:0:0"
+      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+      dynamicFieldName="" isCalendarTimeout="false"
+      isStaticTimeout="true" isXPathTimeout="false"
+      pipelineCalendarAlias="" pipelineCalendarDays=""
+      pipelineCalendarHours="" pipelineCalendarMinutes=""
+      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+    <wmExpression/>
+    <swimlane Id="80709738-b4ea-48d5-ab66-0b6a964b04bf" blue="204"
+      green="255" height="150" label="Cordinador General Proyectos"
+      labelBlue="255" labelGreen="238" labelRed="221"
+      name="Cordinador General Proyectos" red="255" uid="W18" width="943">
+      <documentation/>
+    </swimlane>
+  </pool>
+  <pool Id="50aaf197-3d3b-4691-b78c-817189e4553a" blue="128"
+    containerType="BPMN_SUBPROCESS" external="true"
+    externalizeConditions="false" green="128" isCollapsed="false"
+    isCompensating="false" isTestAfter="false" label="Pool"
+    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
+    loopMaximum="0" loopMaximumField="" name="1"
+    orientation="horizontal" red="128" retryCount="0" stepLock="false"
+    uid="P2" useCorrelation="false">
+    <documentation/>
+    <businessKPIs/>
+    <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    <poolReference Id="23f77b81-c927-4b07-8ec8-0d2fbb97b862" label="  "
+      logicalServer="Default" poolName="5" stepLock="false" uid="S7"
+      useCorrelation="false" x="134" y="89">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    </poolReference>
+    <poolReference Id="67c23b68-f9e1-42ba-862b-090cc1cb1a3e"
+      label="Fundacion CMPC" logicalServer="Default" poolName="11"
+      stepLock="false" uid="S13" useCorrelation="false" x="134" y="240">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    </poolReference>
+    <timeout calendarAlias="" calendarTime="0:0:0"
+      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+      dynamicFieldName="" isCalendarTimeout="false"
+      isStaticTimeout="true" isXPathTimeout="false"
+      pipelineCalendarAlias="" pipelineCalendarDays=""
+      pipelineCalendarHours="" pipelineCalendarMinutes=""
+      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+    <wmExpression/>
+  </pool>
+  <pool Id="8b3a4a51-4f32-46a9-91eb-c1b125d1dbb4" blue="128"
+    containerType="BPMN_SUBPROCESS" external="false"
+    externalizeConditions="false" green="128" isCollapsed="false"
+    isCompensating="false" isTestAfter="false" label="Fundacion CMPC"
+    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
+    loopMaximum="0" loopMaximumField="" name="11"
+    orientation="horizontal" red="128" retryCount="0" stepLock="false"
+    uid="P12" useCorrelation="false">
+    <documentation/>
+    <businessKPIs/>
+    <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    <gatewayStep Id="a9875e73-84e3-4adc-9f93-afb651dc8e6e"
+      externalizeConditions="false" gatewayType="EXCLUSIVE" height="35"
+      label="Gateway1" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" retryCount="0" stepLock="false" uid="S14"
+      useCorrelation="false" width="35" x="123" y="208">
+      <documentation/>
+      <join joinType="UnsynchronizedOr" suppressJoinFailure="false" synchronizationPoint="false"/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}publicaMarcoV1"/>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </gatewayStep>
+    <gatewayStep Id="8abfda3e-7fc2-4149-9487-381f498d3936"
+      externalizeConditions="false" gatewayType="EXCLUSIVE" height="35"
+      label="Gateway2" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" retryCount="0" stepLock="false" uid="S16"
+      useCorrelation="false" width="35" x="455" y="211">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}publicaMarcoV1"/>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </gatewayStep>
+    <noneEventStep Id="ff0e75d9-6983-488c-8bbc-9da5797efbd9"
+      eventType="END" height="27" label="End Event1" labelHeight="-1"
+      labelWidth="-1" logicalServer="Default" stepLock="false" uid="S17"
+      useCorrelation="false" width="27" x="835" y="215">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+    </noneEventStep>
+    <receiveStep Id="5b266927-d7db-46cb-a21e-62edc1160a0d"
+      allowsSynchronousReply="false" edaEventQName="" edaSubFilter=""
+      edaSubFilterLang="" eventType="START"
+      externalizeConditions="false" height="27"
+      isStartStepServiceRequired="true"
+      jmsAliasConnection="PE_NONTRANSACTIONAL_ALIAS"
+      jmsDestination="Fundacion_crearMarcoLogico_SUBQUEUE"
+      jmsDestinationType="" label="Start publicaMarcoV1"
+      labelHeight="-1" labelWidth="-1" logicalServer="Default"
+      outputMessageType="{sFCMPC.docs}publicaMarcoV1"
+      receiveProtocol="JMS" receiveType="EMPTY" stepLock="false"
+      uid="S22" useCorrelation="false" width="27" x="68" y="216">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <wmExpressionFilter/>
+    </receiveStep>
+    <invokeStep Id="eca3baf0-bcfb-44fe-986b-eaf3cf1b7acb"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="P/crearMarcoLogicoTasks"
+      invokeId="9D70B072-BDD3-DE37-E0FD-8EAE70BDDD64" invokeLocation=""
+      invokeName="Aprobar Marco del Proyecto V2" invokeType="TASK"
+      isCompensating="false" isTestAfter="false"
+      label="Aprobar Marco del Proyecto" labelHeight="-1"
+      labelWidth="-1" logicalServer="Default" loopMaximum="0"
+      loopMaximumField="" retryCount="0" routingRuleSet=""
+      ruleType="WMRULE" stepLock="false" uid="S18"
+      useCorrelation="false" width="93" x="243" y="216">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}publicaMarcoV1"/>
+      <input name="{ProcessNamespace}Aprobar Marco del ProyectoInputEnv"/>
+      <wmExpression/>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <output name="{ProcessNamespace}Aprobar Marco del ProyectoOutputEnv"/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
+    <invokeStep Id="902d29dd-16c9-48af-bd04-6d3e6fe12ba6"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="P/crearMarcoLogicoTasks"
+      invokeId="8D085E61-BA00-9140-9C05-162E5120DFA6" invokeLocation=""
+      invokeName="Ajustar Marco Proyecto V2" invokeType="TASK"
+      isCompensating="false" isTestAfter="false"
+      label="AjustarMarcoProyecto" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" loopMaximum="0" loopMaximumField=""
+      retryCount="0" routingRuleSet="" ruleType="WMRULE"
+      stepLock="false" uid="S19" useCorrelation="false" width="93"
+      x="232" y="49">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}publicaMarcoV1"/>
+      <input name="{ProcessNamespace}AjustarMarcoProyectoInputEnv"/>
+      <wmExpression/>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <output name="{ProcessNamespace}AjustarMarcoProyectoOutputEnv"/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
+    <invokeStep Id="40ddabf5-8bbe-489d-92e4-5cec634bbb1a"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="sFCMPC.services"
+      invokeId="sFCMPC.services:registraMarcoLogico_2" invokeLocation=""
+      invokeName="registraMarcoLogico_2" invokeType="ISSERVICE"
+      isCompensating="false" isTestAfter="false"
+      label="registraMarcoLogico_2" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" loopMaximum="0" loopMaximumField=""
+      retryCount="0" routingRuleSet="" ruleType="WMRULE"
+      stepLock="false" uid="S25" useCorrelation="false" width="93"
+      x="626" y="174">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}publicaMarcoV1"/>
+      <wmExpression/>
+      <output name="{ProcessNamespace}publicaMarcoV1"/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
+    <transition Id="60bc1575-f2aa-4355-bce5-022745ea83f4" blue="255"
+      conditionDescription=""
+      conditionText="publicaMarcoV1/marcoLogicoV1/aprobadoML = no"
+      conditionType="IF" green="0" lineShape="CURVE" red="0"
+      source="S16" sourceLocation="472,211" sourceTerminal="TOP"
+      target="S19" targetLocation="325,79" targetTerminal="RIGHT" uid="T41">
+      <labelLayout blue="0" defaultLocation="false" green="196"
+        height="14" red="255" width="276" x="534" y="305">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression>
+        <row chainOperator="" leftFieldPath="marcoLogicoV1/aprobadoML"
+          leftOperand="{ProcessNamespace}publicaMarcoV1" operator="=" rightOperand="'no'"/>
+      </wmExpression>
+    </transition>
+    <transition Id="39648aea-9b7b-4f76-9640-46af1cb5b21f" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="CURVE" red="0" source="S19"
+      sourceLocation="232,79" sourceTerminal="LEFT" target="S14"
+      targetLocation="140,208" targetTerminal="TOP" uid="T42">
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="6840be86-354f-4dd6-bed8-2af04d75bb82" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="CURVE" red="0" source="S14"
+      sourceLocation="158,225" sourceTerminal="RIGHT" target="S18"
+      targetLocation="243,246" targetTerminal="LEFT" uid="T35">
+      <labelLayout blue="0" defaultLocation="false" green="196"
+        height="-1" red="255" width="-1" x="357" y="462">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="6cffcd62-7011-4aab-98d9-a6ece83934b8" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="CURVE" red="0" source="S18"
+      sourceLocation="336,246" sourceTerminal="RIGHT" target="S16"
+      targetLocation="455,228" targetTerminal="LEFT" uid="T39">
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="93f5df8c-c9c6-4abe-8213-adbdc17488cc" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="CURVE" red="0" source="S22"
+      sourceLocation="95,229" sourceTerminal="RIGHT" target="S14"
+      targetLocation="123,225" targetTerminal="LEFT" uid="T23">
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="d85a2e6b-d015-4747-b06c-e0160ba05318" blue="255"
+      conditionDescription=""
+      conditionText="publicaMarcoV1/marcoLogicoV1/aprobadoML = si"
+      conditionType="IF" green="0" lineShape="CURVE" red="0"
+      source="S16" sourceLocation="490,228" sourceTerminal="RIGHT"
+      target="S25" targetLocation="626,204" targetTerminal="LEFT" uid="T26">
+      <labelLayout blue="0" defaultLocation="false" green="196"
+        height="14" red="255" width="243" x="619" y="517">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression>
+        <row chainOperator="" leftFieldPath="marcoLogicoV1/aprobadoML"
+          leftOperand="{ProcessNamespace}publicaMarcoV1" operator="=" rightOperand="'si'"/>
+      </wmExpression>
+    </transition>
+    <transition Id="675a9240-936d-4e1a-8ce5-875c34874c99" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="CURVE" red="0" source="S25"
+      sourceLocation="719,204" sourceTerminal="RIGHT" target="S17"
+      targetLocation="835,228" targetTerminal="LEFT" uid="T27">
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <timeout calendarAlias="" calendarTime="0:0:0"
+      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+      dynamicFieldName="" isCalendarTimeout="false"
+      isStaticTimeout="true" isXPathTimeout="false"
+      pipelineCalendarAlias="" pipelineCalendarDays=""
+      pipelineCalendarHours="" pipelineCalendarMinutes=""
+      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+    <wmExpression/>
+    <swimlane Id="c7f9db7f-bff4-4ab6-b41f-1a66ddfa3fdb" blue="204"
+      green="255" height="150" label="Cordinador General Proyectos"
+      labelBlue="255" labelGreen="238" labelRed="221"
+      name="Cordinador General Proyectos" red="255" uid="W30" width="943">
+      <documentation/>
+    </swimlane>
+    <swimlane Id="74a02095-80b6-4656-8824-8716799d18e1" blue="204"
+      green="255" height="208" label="Gerente Fundacion CMPC"
+      labelBlue="255" labelGreen="238" labelRed="221"
+      name="Gerente Fundacion CMPC" red="255" uid="W8" width="943">
+      <documentation/>
+    </swimlane>
+  </pool>
+  <documentation/>
+  <qualityOfService expressPipeline="true" minLogLevel="5"
+    optimizeLocally="true" volatileTracking="false" volatileTransition="true"/>
+  <edaIntrinsics processEvent="false" stepEvent="false"/>
+  <easeOfOperations enableProcessForTrackingInTarget="false"
+    enableProcessInTarget="false" stepsEnabledForResubmitInTarget=""/>
+  <messageFlow Id="ceadd2f0-047f-43c8-b643-130c141d05e1" blue="100"
+    conditionDescription="" green="100" lineShape="CURVE" red="100"
+    source="S8" sourceLocation="79,109" sourcePool="5"
+    sourceTerminal="BOTTOM" target="S22" targetLocation="81,216"
+    targetPool="11" targetTerminal="TOP" uid="24">
+    <labelLayout blue="0" defaultLocation="true" green="196" height="-1"
+      red="255" width="-1" x="-1" y="-1">
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+    </labelLayout>
+  </messageFlow>
+</businessProcessDiagram>

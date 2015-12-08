@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclients>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaPlanta_WSD?WSDL" isService="sFCMPC.services:leeTablaPlanta_WSD" name="leeTablaPlanta_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaplanta_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablaplanta_wsd/leeTablaPlanta_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaPlanta_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaplanta_wsd.SFCMPCServicesLeeTablaPlanta_WSDStub">
+<wsclient managedBean="LeeTablaPlanta2" operation="leeTablaPlanta"/>
+<wsclient managedBean="LeeTablaPlanta" operation="leeTablaPlanta"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablaplanta_wsd\SFCMPCServicesLeeTablaPlanta_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:generadorProyecto_WSD?WSDL" isService="sFCMPC.services:generadorProyecto_WSD" name="generadorProyecto_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.generadorproyecto_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/generadorproyecto_wsd/generadorProyecto_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:generadorProyecto_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.generadorproyecto_wsd.SFCMPCServicesGeneradorProyecto_WSDStub">
+<wsclient managedBean="GeneradorProyecto3" operation="generadorProyecto"/>
+<wsclient managedBean="GeneradorProyecto2" operation="generadorProyecto"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\generadorproyecto_wsd\SFCMPCServicesGeneradorProyecto_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaComuna_WSD?WSDL" isService="sFCMPC.services:leeTablaComuna_WSD" name="leeTablaComuna_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablacomuna_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablacomuna_wsd/leeTablaComuna_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaComuna_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablacomuna_wsd.SFCMPCServicesLeeTablaComuna_WSDStub">
+<wsclient managedBean="LeeTablaComuna" operation="leeTablaComuna"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablacomuna_wsd\SFCMPCServicesLeeTablaComuna_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaEstablecimiento_WSD?WSDL" isService="sFCMPC.services:leeTablaEstablecimiento_WSD" name="leeTablaEstablecimiento_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaestablecimiento_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablaestablecimiento_wsd/leeTablaEstablecimiento_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaEstablecimiento_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaestablecimiento_wsd.SFCMPCServicesLeeTablaEstablecimiento_WSDStub">
+<wsclient managedBean="LeeTablaEstablecimiento" operation="leeTablaEstablecimiento"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablaestablecimiento_wsd\SFCMPCServicesLeeTablaEstablecimiento_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaProfesional_WSD?WSDL" isService="sFCMPC.services:leeTablaProfesional_WSD" name="leeTablaProfesional_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaprofesional_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablaprofesional_wsd/leeTablaProfesional_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaProfesional_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaprofesional_wsd.SFCMPCServicesLeeTablaProfesional_WSDStub">
+<wsclient managedBean="LeeTablaProfesional" operation="leeTablaProfesional"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablaprofesional_wsd\SFCMPCServicesLeeTablaProfesional_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaEncargado_WSD?WSDL" isService="sFCMPC.services:leeTablaEncargado_WSD" name="leeTablaEncargado_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaencargado_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablaencargado_wsd/leeTablaEncargado_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaEncargado_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablaencargado_wsd.SFCMPCServicesLeeTablaEncargado_WSDStub">
+<wsclient managedBean="LeeTablaEncargado2" operation="leeTablaEncargado"/>
+<wsclient managedBean="LeeTablaEncargado" operation="leeTablaEncargado"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablaencargado_wsd\SFCMPCServicesLeeTablaEncargado_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaModelos_WSD?WSDL" isService="sFCMPC.services:leeTablaModelos_WSD" name="leeTablaModelos_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablamodelos_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/leetablamodelos_wsd/leeTablaModelos_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:leeTablaModelos_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.leetablamodelos_wsd.SFCMPCServicesLeeTablaModelos_WSDStub">
+<wsclient managedBean="LeeTablaModelos2" operation="leeTablaModelos"/>
+<wsclient managedBean="LeeTablaModelos" operation="leeTablaModelos"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\leetablamodelos_wsd\SFCMPCServicesLeeTablaModelos_WSDStub.java</generatedfile>
+</webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL" isService="sFCMPC.services:getMLogico_WSD" name="getMLogico_WSD" package="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.getmlogico_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/fcmpcProyecto/wsclient/sfcmpc/services/getmlogico_wsd/getMLogico_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL">
+<wsproxy className="caf.war.fcmpcProyecto.wsclient.sfcmpc.services.getmlogico_wsd.SFCMPCServicesGetMLogico_WSDStub">
+<wsclient managedBean="GetMLogico" operation="getMLogico"/>
+<wsclient managedBean="GetMLogico2" operation="getMLogico"/>
+</wsproxy>
+<generatedfile>caf\war\fcmpcProyecto\wsclient\sfcmpc\services\getmlogico_wsd\SFCMPCServicesGetMLogico_WSDStub.java</generatedfile>
+</webservice>
+</wsclients>

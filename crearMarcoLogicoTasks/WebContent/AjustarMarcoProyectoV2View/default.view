@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='AjustarMarcoProyectoV2ViewDefaultviewView' />
+  <property name='preferencesBean' value='AjustarMarcoProyectoV2View' />
+  <design-time-attribute name='taskTypeID' value='8D085E61-BA00-9140-9C05-162E5120DFA6' />
+  <design-time-attribute name='taskPortletType' value='taskView' />
+  <design-time-attribute name='portlet' value='AjustarMarcoProyectoV2View' />
+  <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+    <property name='id' value='portletInclude' />
+    <property name='portlet' value='/meta/default/fcmpcportales___generamarcologico/0000010765' />
+    <control component-type='javax.faces.Parameter' renderer-type=''>
+      <property name='name' value='tipoProyecto' />
+      <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.nombrePro}' />
+    </control>
+    <control component-type='javax.faces.Parameter' renderer-type=''>
+      <property name='name' value='taskId' />
+      <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskID}' />
+    </control>
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='taskViewForm' />
+    <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='globalOnly' value='true' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+      <property name='id' value='taskDataSubGroup' />
+      <control component-type='javax.faces.Parameter' renderer-type=''>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+        <property name='id' value='propertyGroup' />
+        <property name='label' value='Observaciones&#13;&#10;' />
+        <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+          <property name='height' value='20px' />
+          <property name='id' value='staticRow1' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+          <property name='id' value='staticRow2' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell2' />
+            <control component-type='com.webmethods.caf.faces.standard.HtmlInputTextarea' renderer-type='com.webmethods.caf.faces.Textarea'>
+              <property name='id' value='htmlInputText' />
+              <property name='rows' value='5' />
+              <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskData.publicaMarcoV1.marcoLogicoV1.observacionesML}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+          <property name='height' value='20px' />
+          <property name='id' value='staticRow' />
+          <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='id' value='staticCell1' />
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertySubmit' renderer-type='com.webmethods.caf.faces.panel.PropertySubmit'>
+      <design-time-attribute name='rolledUp' value='false' />
+      <property name='rendered' value='false' />
+      <facet name='submit'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.submitTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.autoAccept || AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.submit&quot;]}' />
+        </control>
+      </facet>
+      <facet name='cancel'>
+        <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+          <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.cancelView}' signature='java.lang.String action()' />
+          <property name='rendered' value='#{not empty activePreferencesBean.finishUrl}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.return&quot;]}' />
+        </control>
+      </facet>
+      <facet name='previous'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.acceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.autoAccept &amp;&amp; !AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.accept&quot;]}' />
+        </control>
+      </facet>
+      <facet name='next'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.unacceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.autoAccept &amp;&amp; AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.release&quot;]}' />
+        </control>
+      </facet>
+      <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+        <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.completeTask}' signature='java.lang.String action()' />
+        <property name='disabled' value='#{not AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='rendered' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.autoAccept || AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.currentUserAccepted}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.complete&quot;]}' />
+      </control>
+      <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+        <property name='disabled' value='#{not AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='for' value=':assignToForm:assignedPrincipalPicker' />
+        <property name='id' value='toggleAssignedPrincipalPicker' />
+        <property name='rendered' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.adhocRouting}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.assign.users&quot;]}' />
+        <property name='way' value='show' />
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertySubmit' renderer-type='com.webmethods.caf.faces.panel.PropertySubmit'>
+      <property name='id' value='propertySubmit' />
+      <facet name='submit'>
+        <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+          <property name='action' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.cancelView}' signature='java.lang.String action()' />
+          <property name='id' value='htmlCommandButton' />
+          <property name='rendered' value='#{not empty activePreferencesBean.finishUrl}' />
+          <property name='value' value='Retornar a la bandeja de Tareas' />
+        </control>
+      </facet>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='id' value='optionalPanel' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+        <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.task.info&quot;]}' />
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.name&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='nameText' />
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.name}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.description&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='descriptionText' />
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.description}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.created.on&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.createdDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat1' />
+            <property name='style' value='padding-left: 0.5em;&#13;&#10;' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.createdByDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.last.modified&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.lastModifiedDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat2' />
+            <property name='style' value='padding-left:0.5em' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.taskDisplayProvider.lastModifiedDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expires&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.expireDate}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.status&quot;]}' />
+          <control component-type='com.webmethods.caf.faces.select.SelectOneOutput' renderer-type='com.webmethods.caf.faces.select.SelectOneOutput'>
+            <property name='id' value='statusText' />
+            <property name='value' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.taskInfo.status}' />
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='activeStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.active&quot;]}' />
+              <property name='itemValue' value='active' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='cancelledStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.canceled&quot;]}' />
+              <property name='itemValue' value='cancelled' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='completedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.completed&quot;]}' />
+              <property name='itemValue' value='completed' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='errorStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.error&quot;]}' />
+              <property name='itemValue' value='error' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='expiredStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expired&quot;]}' />
+              <property name='itemValue' value='expired' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='suspendedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.suspended&quot;]}' />
+              <property name='itemValue' value='suspended' />
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='for' value=':taskViewForm:optionalPanel' />
+      <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.toggle.task.info&quot;]}' />
+    </control>
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='assignToForm' />
+    <property name='rendered' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.ajustarMarcoProyectoV2.adhocRouting}' />
+    <control component-type='com.softwareag.caf.controls.mwsx.PeoplePickerDialog' renderer-type=''>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='applyButtonAction' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.assignToPrincipals}' signature='java.lang.String action()' />
+      <property name='groupSearchAllowed' value='false' />
+      <property name='id' value='assignedPrincipalPicker' />
+      <property name='lazy' value='' />
+      <property name='progressDelay' value='' />
+      <property name='refreshOnShow' value='' />
+      <property name='suppressInputs' value='' />
+      <property name='targetValue' value='#{AjustarMarcoProyectoV2ViewDefaultviewView.principalList}' />
+      <property name='twoPass' value='' />
+      <facet name='popupPanel'>
+        <control component-type='javax.faces.NamingContainer' renderer-type=''>
+          <property name='id' value='assignTargetPickerPopup' />
+          <control component-type='com.webmethods.caf.faces.command.async.Link' renderer-type='com.webmethods.caf.faces.command.async.Link'>
+            <property name='id' value='showAvailability' />
+            <property name='onclick' value='CAF.Popup.hideAll();' />
+            <property name='refresh' value='personCalendarDialog' />
+            <property name='toggle' value='personCalendarDialog' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.show.availability&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='name' value='personURI' />
+              <property name='value' value='#{row.principalURI}' />
+            </control>
+          </control>
+        </control>
+      </facet>
+    </control>
+    <control component-type='com.softwareag.caf.controls.mwsx.PersonCalendarDialog' renderer-type=''>
+      <property name='id' value='personCalendarDialog' />
+      <property name='personURI' value='#{param.personURI}' />
+    </control>
+  </control>
+</view>

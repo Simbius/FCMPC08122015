@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclients>
+<webservice authenticationMethod="1" isConnectionURL="http://192.168.75.129:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL" isService="sFCMPC.services:getMLogico_WSD" name="getMLogico_WSD" package="caf.war.crearMarcoLogicoTasks.wsclient.sfcmpc.services.getmlogico_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/crearMarcoLogicoTasks/wsclient/sfcmpc/services/getmlogico_wsd/getMLogico_WSD.wsdl" wsdlURL="http://192.168.75.129:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL">
+<wsproxy className="caf.war.crearMarcoLogicoTasks.wsclient.sfcmpc.services.getmlogico_wsd.SFCMPCServicesGetMLogico_WSDStub">
+<wsclient managedBean="GetMLogico" operation="getMLogico"/>
+</wsproxy>
+<generatedfile>caf\war\crearMarcoLogicoTasks\wsclient\sfcmpc\services\getmlogico_wsd\SFCMPCServicesGetMLogico_WSDStub.java</generatedfile>
+</webservice>
+</wsclients>

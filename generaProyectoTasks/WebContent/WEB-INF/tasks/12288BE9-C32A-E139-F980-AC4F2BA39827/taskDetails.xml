@@ -1,0 +1,19 @@
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+>
+	<CONTEXT alias="12288BE9-C32A-E139-F980-AC4F2BA39827.task.app">
+		<folder name="Actualizar Contenidos Details" description="Actualizar Contenidos Details" alias="12288BE9-C32A-E139-F980-AC4F2BA39827.task.app.details.page" isTaskFolder="false">
+            <page>
+            	<row>
+            		<column>
+            			<generaproyectotasks___actualizarcontenidosoverview name="Task View" alias="12288BE9-C32A-E139-F980-AC4F2BA39827.task.app.details.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+            			</generaproyectotasks___actualizarcontenidosoverview> 
+                    </column>
+                </row>
+                <hobos/>
+            </page>
+        </folder>
+    </CONTEXT>
+</CONFIG>

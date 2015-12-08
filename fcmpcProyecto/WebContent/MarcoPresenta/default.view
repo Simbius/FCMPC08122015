@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='MarcoPresentaDefaultviewView' />
+  <property name='preferencesBean' value='MarcoPresenta' />
+  <design-time-attribute name='portlet' value='marcoPresenta' />
+  <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+    <property name='id' value='messages' />
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='defaultForm' />
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+      <property name='id' value='propertyGroup2' />
+      <property name='label' value='Proyecto' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine' />
+        <property name='label' value='Nombre Pro' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.nombrePro}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine1' />
+        <property name='label' value='Periodo Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.periodoSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine2' />
+        <property name='label' value='Periodo' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText1' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.periodo}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine3' />
+        <property name='label' value='Fecha Desde Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText1' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaDesdeSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine4' />
+        <property name='label' value='Fecha Desde' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText2' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaDesde}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine5' />
+        <property name='label' value='Fecha Hasta Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText2' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaHastaSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine6' />
+        <property name='label' value='Fecha Hasta' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText3' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaHasta}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine7' />
+        <property name='label' value='Encargado Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText3' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.encargadoSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine8' />
+        <property name='label' value='Encargado' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText4' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.encargado}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine9' />
+        <property name='label' value='Planta Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText4' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.plantaSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine10' />
+        <property name='label' value='Planta' />
+        <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+          <property name='footerClass' value='portlet-section-footer' />
+          <property name='headerClass' value='portlet-section-subheader' />
+          <property name='id' value='asyncTable' />
+          <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+          <property name='rows' value='10' />
+          <property name='selectedRowClass' value='portlet-section-selected' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.plantaProvider3}' />
+          <property name='var' value='planta' />
+          <property name='width' value='100%' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlPanelGroup' renderer-type='javax.faces.Group'>
+              <property name='id' value='htmlPanelGroup' />
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText' />
+                <property name='raw' value='true' />
+                <property name='value' value='Planta Provider 3' />
+              </control>
+              <control component-type='com.webmethods.caf.faces.table.AddRowButton' renderer-type='com.webmethods.caf.faces.table.AddRowButton'>
+                <property name='id' value='addRowButton' />
+                <property name='label' value='Append Row' />
+              </control>
+            </control>
+          </facet>
+          <facet name='footer'>
+            <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+              <property name='id' value='prevNext' />
+              <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+                <property name='id' value='blockPanel' />
+                <property name='style' value='text-align:center;' />
+                <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                  <property name='id' value='dataTotal' />
+                </control>
+              </control>
+            </control>
+          </facet>
+          <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+            <property name='id' value='htmlTableColumn' />
+            <property name='label' value='Planta' />
+            <property name='sort' value='#{planta}' />
+            <facet name='header'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText1' />
+                <property name='raw' value='true' />
+                <property name='value' value='Planta' />
+              </control>
+            </facet>
+            <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlInputText' />
+              <property name='value' value='#{MarcoPresentaDefaultviewView.plantaProvider3.currentRow}' />
+              <property name='width' value='input20' />
+            </control>
+            <control component-type='com.webmethods.caf.faces.table.RemoveRowButton' renderer-type='com.webmethods.caf.faces.table.RemoveRowButton'>
+              <property name='id' value='removeRowButton' />
+              <property name='label' value='Remove' />
+              <property name='row' value='_this' />
+            </control>
+          </control>
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine11' />
+        <property name='label' value='Comuna Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText5' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.comunaSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine12' />
+        <property name='label' value='Comuna' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText5' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.comuna}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine13' />
+        <property name='label' value='Objetivo General Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText6' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.objetivoGeneralSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine14' />
+        <property name='label' value='Objetivo General' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText6' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.objetivoGeneral}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine15' />
+        <property name='label' value='Establecimientos Specified' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <converter converter-id='javax.faces.Boolean'>
+          </converter>
+          <property name='id' value='htmlOutputText7' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{MarcoPresentaDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.establecimientosSpecified}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+        <property name='footerClass' value='portlet-section-footer' />
+        <property name='headerClass' value='portlet-section-subheader' />
+        <property name='id' value='asyncTable1' />
+        <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+        <property name='rows' value='10' />
+        <property name='selectedRowClass' value='portlet-section-selected' />
+        <property name='value' value='#{MarcoPresentaDefaultviewView.establecimientosProvider3}' />
+        <property name='var' value='establecimiento' />
+        <property name='width' value='100%' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlPanelGroup' renderer-type='javax.faces.Group'>
+            <property name='id' value='htmlPanelGroup' />
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText' />
+              <property name='raw' value='true' />
+              <property name='value' value='Establecimientos Provider 3' />
+            </control>
+            <control component-type='com.webmethods.caf.faces.table.AddRowButton' renderer-type='com.webmethods.caf.faces.table.AddRowButton'>
+              <property name='id' value='addRowButton' />
+              <property name='label' value='Append Row' />
+            </control>
+          </control>
+        </facet>
+        <facet name='footer'>
+          <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+            <property name='id' value='prevNext' />
+            <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+              <property name='id' value='blockPanel' />
+              <property name='style' value='text-align:center;' />
+              <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+                <property name='id' value='dataTotal' />
+              </control>
+            </control>
+          </control>
+        </facet>
+        <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+          <property name='id' value='htmlTableColumn' />
+          <property name='label' value='Establecimiento Specified' />
+          <property name='sort' value='#{establecimiento.establecimientoSpecified}' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText1' />
+              <property name='raw' value='true' />
+              <property name='value' value='Establecimiento Specified' />
+            </control>
+          </facet>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='javax.faces.Boolean'>
+            </converter>
+            <property name='id' value='htmlOutputText2' />
+            <property name='raw' value='true' />
+            <property name='value' value='#{establecimiento.establecimientoSpecified}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+          <property name='id' value='htmlTableColumn1' />
+          <property name='label' value='Establecimiento' />
+          <property name='sort' value='#{establecimiento}' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText3' />
+              <property name='raw' value='true' />
+              <property name='value' value='Establecimiento' />
+            </control>
+          </facet>
+          <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='htmlInputText' />
+            <property name='value' value='#{MarcoPresentaDefaultviewView.establecimientosProvider3.currentRow}' />
+            <property name='width' value='input20' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+          <property name='id' value='htmlTableColumn2' />
+          <property name='label' value='Profesionales Specified' />
+          <property name='sort' value='#{establecimiento.profesionalesSpecified}' />
+          <facet name='header'>
+            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+              <property name='id' value='htmlOutputText4' />
+              <property name='raw' value='true' />
+              <property name='value' value='Profesionales Specified' />
+            </control>
+          </facet>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='javax.faces.Boolean'>
+            </converter>
+            <property name='id' value='htmlOutputText5' />
+            <property name='raw' value='true' />
+            <property name='value' value='#{establecimiento.profesionalesSpecified}' />
+          </control>
+          <control component-type='com.webmethods.caf.faces.table.RemoveRowButton' renderer-type='com.webmethods.caf.faces.table.RemoveRowButton'>
+            <property name='id' value='removeRowButton' />
+            <property name='label' value='Remove' />
+            <property name='row' value='_this' />
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+      <property name='id' value='propertyGroup' />
+      <property name='label' value='Generador Proyecto' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+        <property name='id' value='propertyGroup1' />
+        <property name='label' value='Generador Proyecto' />
+      </control>
+    </control>
+  </control>
+</view>
