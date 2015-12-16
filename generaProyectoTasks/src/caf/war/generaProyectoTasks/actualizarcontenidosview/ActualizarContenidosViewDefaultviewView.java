@@ -183,6 +183,7 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 		{"#{ActualizarContenidos.autoAccept}", "true"},
 		{"#{ActualizarContenidos.adhocRouting}", "false"},
 	};
+	private java.lang.String indicador;
 
 	/**
 	 * Initialize page
@@ -219,6 +220,17 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 	
 	    resolveDataBinding(ACTUALIZARCONTENIDOS_PROPERTY_BINDINGS, actualizarContenidos, "actualizarContenidos", false, false);
 		return actualizarContenidos;
+	}
+
+
+	public java.lang.String getIndicador()  {
+		
+		return indicador;
+	}
+
+
+	public void setIndicador(java.lang.String indicador)  {
+		this.indicador = indicador;
 	}
 	
 	

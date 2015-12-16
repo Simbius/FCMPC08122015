@@ -25,95 +25,6 @@
     pipelineCalendarDays="" pipelineCalendarHours=""
     pipelineCalendarMinutes="" timeoutStyle="RELATIVE"
     timeoutType="processTimeout" timeoutValue="0" xpathTimeoutValue=""/>
-  <pool Id="745f1173-caaf-47d1-afb9-c2ee70d5dea5" blue="128"
-    containerType="BPMN_SUBPROCESS" external="true"
-    externalizeConditions="false" green="128" isCollapsed="false"
-    isCompensating="false" isTestAfter="false" label="Pool"
-    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
-    loopMaximum="0" loopMaximumField="" name="1"
-    orientation="horizontal" red="128" retryCount="0" stepLock="false"
-    uid="P2" useCorrelation="false">
-    <documentation/>
-    <businessKPIs/>
-    <fontData boldFont="false" fontFamily="" italicFont="false"/>
-    <poolReference Id="defe4b53-a781-4c48-95ac-883b7b865b88"
-      label="Fundacion" logicalServer="Default" poolName="5"
-      stepLock="false" uid="S7" useCorrelation="false" x="127" y="110">
-      <documentation/>
-      <businessKPIs/>
-      <fontData boldFont="false" fontFamily="" italicFont="false"/>
-    </poolReference>
-    <poolReference Id="5dd45032-600e-42ca-b89e-b8a5f642901f" label="  "
-      logicalServer="Default" poolName="20" stepLock="false" uid="S22"
-      useCorrelation="false" x="127" y="-41">
-      <documentation/>
-      <businessKPIs/>
-      <fontData boldFont="false" fontFamily="" italicFont="false"/>
-    </poolReference>
-    <timeout calendarAlias="" calendarTime="0:0:0"
-      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
-      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
-      dynamicFieldName="" isCalendarTimeout="false"
-      isStaticTimeout="true" isXPathTimeout="false"
-      pipelineCalendarAlias="" pipelineCalendarDays=""
-      pipelineCalendarHours="" pipelineCalendarMinutes=""
-      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
-    <wmExpression/>
-  </pool>
-  <pool Id="f7714d3e-6d55-4988-a2c3-a03c55d1a232" blue="128"
-    containerType="BPMN_SUBPROCESS" external="true"
-    externalizeConditions="false" green="128" isCollapsed="false"
-    isCompensating="false" isTestAfter="false" label="  "
-    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
-    loopMaximum="0" loopMaximumField="" name="20"
-    orientation="horizontal" red="128" retryCount="0" stepLock="false"
-    uid="P21" useCorrelation="false">
-    <documentation/>
-    <businessKPIs/>
-    <fontData boldFont="false" fontFamily="" italicFont="false"/>
-    <invokeStep Id="0d9bcdd3-2e61-4aec-87f6-99db65ad626a"
-      dynamicReferenceProcess="false" externalizeConditions="false"
-      height="60" invokeContainer="" invokeId="" invokeLocation=""
-      invokeName="" invokeType="EMPTY" isCompensating="false"
-      isTestAfter="false" label="Crear Proyecto" labelHeight="-1"
-      labelWidth="-1" logicalServer="Default" loopMaximum="0"
-      loopMaximumField="" retryCount="0" routingRuleSet=""
-      ruleType="WMRULE" stepLock="false" uid="S23"
-      useCorrelation="false" width="93" x="65" y="36">
-      <documentation/>
-      <businessKPIs/>
-      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
-        <fontColor blue="0" green="0" red="0"/>
-      </fontData>
-      <wmExpression/>
-      <extendedProperty name="retries" value="0"/>
-      <extendedProperty name="retryInterval" value="60000"/>
-      <timeout calendarAlias="" calendarTime="0:0:0"
-        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
-        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
-        dynamicFieldName="" isCalendarTimeout="false"
-        isStaticTimeout="true" isXPathTimeout="false"
-        pipelineCalendarAlias="" pipelineCalendarDays=""
-        pipelineCalendarHours="" pipelineCalendarMinutes=""
-        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
-        timeoutValue="0" xpathTimeoutValue=""/>
-    </invokeStep>
-    <timeout calendarAlias="" calendarTime="0:0:0"
-      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
-      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
-      dynamicFieldName="" isCalendarTimeout="false"
-      isStaticTimeout="true" isXPathTimeout="false"
-      pipelineCalendarAlias="" pipelineCalendarDays=""
-      pipelineCalendarHours="" pipelineCalendarMinutes=""
-      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
-    <wmExpression/>
-    <swimlane Id="9fc40ef9-f8f2-46ac-9bdc-6dace35fe877" blue="204"
-      green="255" height="150" label="Cordinador General Proyectos"
-      labelBlue="255" labelGreen="238" labelRed="221"
-      name="Cordinador General Proyectos" red="255" uid="W18" width="943">
-      <documentation/>
-    </swimlane>
-  </pool>
   <pool Id="80640933-377e-4939-a71d-76e5aafdbb95" blue="128"
     containerType="BPMN_SUBPROCESS" external="false"
     externalizeConditions="false" green="128" isCollapsed="false"
@@ -128,7 +39,7 @@
     <noneEventStep Id="a6e58371-6add-4c53-8c08-1a04eaa48abc"
       eventType="END" height="27" label="End Event1" labelHeight="-1"
       labelWidth="-1" logicalServer="Default" stepLock="false" uid="S9"
-      useCorrelation="false" width="27" x="647" y="366">
+      useCorrelation="false" width="27" x="936" y="423">
       <documentation/>
       <businessKPIs/>
       <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -159,17 +70,62 @@
       <extendedProperty name="retryInterval" value="60000"/>
       <wmExpressionFilter/>
     </receiveStep>
+    <gatewayStep Id="b00f84d1-c95e-421c-aa00-affdccd148fe"
+      externalizeConditions="false" gatewayType="EXCLUSIVE" height="35"
+      label="Gateway1" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" retryCount="0" stepLock="false" uid="S69"
+      useCorrelation="false" width="35" x="632" y="362">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}planProyectoV2"/>
+      <output name="{ProcessNamespace}planProyectoV2"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </gatewayStep>
+    <gatewayStep Id="cc0d985b-4386-4c8e-882f-e1bb11a3533a"
+      externalizeConditions="false" gatewayType="EXCLUSIVE" height="35"
+      label="Gateway2" labelHeight="-1" labelWidth="-1"
+      logicalServer="Default" retryCount="0" stepLock="false" uid="S73"
+      useCorrelation="false" width="35" x="357" y="208">
+      <documentation/>
+      <join joinType="UnsynchronizedOr" suppressJoinFailure="false" synchronizationPoint="false"/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}planProyectoV2"/>
+      <output name="{ProcessNamespace}planProyectoV2"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </gatewayStep>
     <invokeStep Id="e652a9b7-b9dc-45b1-9e2b-e745d827eb02"
       dynamicReferenceProcess="false" externalizeConditions="false"
       height="60" invokeContainer="P/generaProyectoTasks"
-      invokeId="11284663-3DB6-AC9F-C688-2AF02BA67F89" invokeLocation=""
-      invokeName="Actualizar Marco Logico" invokeType="TASK"
+      invokeId="12288BE9-C32A-E139-F980-AC4F2BA39827" invokeLocation=""
+      invokeName="Actualizar Contenidos" invokeType="TASK"
       isCompensating="false" isTestAfter="false"
       label="Actualizar Marco Logico" labelHeight="-1" labelWidth="-1"
       logicalServer="Default" loopMaximum="0" loopMaximumField=""
       retryCount="0" routingRuleSet="" ruleType="WMRULE"
       stepLock="false" uid="S15" useCorrelation="false" width="99"
-      x="325" y="247">
+      x="325" y="268">
       <documentation/>
       <businessKPIs/>
       <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -200,7 +156,7 @@
       labelWidth="-1" logicalServer="Default" loopMaximum="0"
       loopMaximumField="" retryCount="0" routingRuleSet=""
       ruleType="WMRULE" stepLock="false" uid="S16"
-      useCorrelation="false" width="109" x="472" y="350">
+      useCorrelation="false" width="109" x="458" y="407">
       <documentation/>
       <businessKPIs/>
       <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -271,10 +227,10 @@
     <transition Id="9ddf3c60-4c78-4d0f-8776-c54abbecefa2" blue="255"
       conditionDescription="" conditionText="" conditionType="IF"
       green="0" lineShape="STRAIGHT" red="0" source="S15"
-      sourceLocation="424,277" sourceTerminal="RIGHT" target="S16"
-      targetLocation="472,380" targetTerminal="LEFT" uid="T62">
-      <bendpoint index="0" location="604,388" weight="0.5"/>
-      <bendpoint index="1" location="604,491" weight="0.5"/>
+      sourceLocation="424,298" sourceTerminal="RIGHT" target="S16"
+      targetLocation="458,437" targetTerminal="LEFT" uid="T62">
+      <bendpoint index="0" location="598,409" weight="0.5"/>
+      <bendpoint index="1" location="598,548" weight="0.5"/>
       <labelLayout blue="0" defaultLocation="true" green="196"
         height="-1" red="255" width="-1" x="-1" y="-1">
         <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -283,13 +239,13 @@
       </labelLayout>
       <wmExpression/>
     </transition>
-    <transition Id="4a8d5476-146b-435c-a768-3998144f871c" blue="255"
+    <transition Id="d8936d4d-28ca-40a5-890a-b4948b61686c" blue="255"
       conditionDescription="" conditionText="" conditionType="IF"
       green="0" lineShape="STRAIGHT" red="0" source="S16"
-      sourceLocation="581,380" sourceTerminal="RIGHT" target="S9"
-      targetLocation="647,379" targetTerminal="LEFT" uid="T65">
-      <bendpoint index="0" location="770,491" weight="0.5"/>
-      <bendpoint index="1" location="770,490" weight="0.5"/>
+      sourceLocation="567,437" sourceTerminal="RIGHT" target="S69"
+      targetLocation="632,379" targetTerminal="LEFT" uid="T70">
+      <bendpoint index="0" location="756,548" weight="0.5"/>
+      <bendpoint index="1" location="756,490" weight="0.5"/>
       <labelLayout blue="0" defaultLocation="true" green="196"
         height="-1" red="255" width="-1" x="-1" y="-1">
         <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -298,12 +254,32 @@
       </labelLayout>
       <wmExpression/>
     </transition>
-    <transition Id="da9e9301-8de6-43b0-97d6-22dc094cabdc" blue="255"
+    <transition Id="c162cc41-75a9-4d0f-af8e-eb484683edf8" blue="255"
+      conditionDescription=""
+      conditionText="planProyectoV2/planProyecto/aprobacion = si"
+      conditionType="IF" green="0" lineShape="STRAIGHT" red="0"
+      source="S69" sourceLocation="667,379" sourceTerminal="RIGHT"
+      target="S9" targetLocation="936,436" targetTerminal="LEFT" uid="T71">
+      <bendpoint index="0" location="958,490" weight="0.5"/>
+      <bendpoint index="1" location="958,547" weight="0.5"/>
+      <labelLayout blue="0" defaultLocation="false" green="196"
+        height="-1" red="255" width="-1" x="853" y="477">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression>
+        <row chainOperator="" leftFieldPath="planProyecto/aprobacion"
+          leftOperand="{ProcessNamespace}planProyectoV2" operator="=" rightOperand="'si'"/>
+      </wmExpression>
+    </transition>
+    <transition Id="6dba0b5c-c1c2-4bdc-ac4a-b816ffd2d2e3" blue="255"
       conditionDescription="" conditionText="" conditionType="IF"
       green="0" lineShape="STRAIGHT" red="0" source="S49"
-      sourceLocation="171,226" sourceTerminal="RIGHT" target="S15"
-      targetLocation="374,247" targetTerminal="TOP" uid="T66">
-      <bendpoint index="0" location="531,337" weight="0.5"/>
+      sourceLocation="171,226" sourceTerminal="RIGHT" target="S73"
+      targetLocation="357,225" targetTerminal="LEFT" uid="T74">
+      <bendpoint index="0" location="420,337" weight="0.5"/>
+      <bendpoint index="1" location="420,336" weight="0.5"/>
       <labelLayout blue="0" defaultLocation="true" green="196"
         height="-1" red="255" width="-1" x="-1" y="-1">
         <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
@@ -311,6 +287,39 @@
         </fontData>
       </labelLayout>
       <wmExpression/>
+    </transition>
+    <transition Id="9a55a9fc-1e12-4e3e-b7b9-0374ec855286" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="STRAIGHT" red="0" source="S73"
+      sourceLocation="374,243" sourceTerminal="BOTTOM" target="S15"
+      targetLocation="374,268" targetTerminal="TOP" uid="T75">
+      <bendpoint index="0" location="531,366" weight="0.5"/>
+      <bendpoint index="1" location="531,366" weight="0.5"/>
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="9183b81f-cc96-4d1f-856a-7ab4df98296d" blue="255"
+      conditionDescription=""
+      conditionText="planProyectoV2/planProyecto/aprobacion = no"
+      conditionType="IF" green="0" lineShape="STRAIGHT" red="0"
+      source="S69" sourceLocation="649,362" sourceTerminal="TOP"
+      target="S73" targetLocation="392,225" targetTerminal="RIGHT" uid="T76">
+      <bendpoint index="0" location="806,336" weight="0.5"/>
+      <labelLayout blue="0" defaultLocation="false" green="196"
+        height="-1" red="255" width="-1" x="671" y="323">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression>
+        <row chainOperator="" leftFieldPath="planProyecto/aprobacion"
+          leftOperand="{ProcessNamespace}planProyectoV2" operator="=" rightOperand="'no'"/>
+      </wmExpression>
     </transition>
     <timeout calendarAlias="" calendarTime="0:0:0"
       dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
@@ -339,6 +348,95 @@
       name="Cordinador General de Proyectos" red="255" uid="W17" width="1068">
       <documentation/>
     </swimlane>
+  </pool>
+  <pool Id="f7714d3e-6d55-4988-a2c3-a03c55d1a232" blue="128"
+    containerType="BPMN_SUBPROCESS" external="true"
+    externalizeConditions="false" green="128" isCollapsed="false"
+    isCompensating="false" isTestAfter="false" label="  "
+    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
+    loopMaximum="0" loopMaximumField="" name="20"
+    orientation="horizontal" red="128" retryCount="0" stepLock="false"
+    uid="P21" useCorrelation="false">
+    <documentation/>
+    <businessKPIs/>
+    <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    <invokeStep Id="0d9bcdd3-2e61-4aec-87f6-99db65ad626a"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="" invokeId="" invokeLocation=""
+      invokeName="" invokeType="EMPTY" isCompensating="false"
+      isTestAfter="false" label="Crear Proyecto" labelHeight="-1"
+      labelWidth="-1" logicalServer="Default" loopMaximum="0"
+      loopMaximumField="" retryCount="0" routingRuleSet=""
+      ruleType="WMRULE" stepLock="false" uid="S23"
+      useCorrelation="false" width="93" x="65" y="36">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <wmExpression/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
+    <timeout calendarAlias="" calendarTime="0:0:0"
+      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+      dynamicFieldName="" isCalendarTimeout="false"
+      isStaticTimeout="true" isXPathTimeout="false"
+      pipelineCalendarAlias="" pipelineCalendarDays=""
+      pipelineCalendarHours="" pipelineCalendarMinutes=""
+      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+    <wmExpression/>
+    <swimlane Id="9fc40ef9-f8f2-46ac-9bdc-6dace35fe877" blue="204"
+      green="255" height="150" label="Cordinador General Proyectos"
+      labelBlue="255" labelGreen="238" labelRed="221"
+      name="Cordinador General Proyectos" red="255" uid="W18" width="943">
+      <documentation/>
+    </swimlane>
+  </pool>
+  <pool Id="745f1173-caaf-47d1-afb9-c2ee70d5dea5" blue="128"
+    containerType="BPMN_SUBPROCESS" external="true"
+    externalizeConditions="false" green="128" isCollapsed="false"
+    isCompensating="false" isTestAfter="false" label="Pool"
+    labelBlue="255" labelGreen="204" labelRed="153" logicalServer=""
+    loopMaximum="0" loopMaximumField="" name="1"
+    orientation="horizontal" red="128" retryCount="0" stepLock="false"
+    uid="P2" useCorrelation="false">
+    <documentation/>
+    <businessKPIs/>
+    <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    <poolReference Id="defe4b53-a781-4c48-95ac-883b7b865b88"
+      label="Fundacion" logicalServer="Default" poolName="5"
+      stepLock="false" uid="S7" useCorrelation="false" x="127" y="110">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    </poolReference>
+    <poolReference Id="5dd45032-600e-42ca-b89e-b8a5f642901f" label="  "
+      logicalServer="Default" poolName="20" stepLock="false" uid="S22"
+      useCorrelation="false" x="127" y="-41">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="" italicFont="false"/>
+    </poolReference>
+    <timeout calendarAlias="" calendarTime="0:0:0"
+      dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+      dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+      dynamicFieldName="" isCalendarTimeout="false"
+      isStaticTimeout="true" isXPathTimeout="false"
+      pipelineCalendarAlias="" pipelineCalendarDays=""
+      pipelineCalendarHours="" pipelineCalendarMinutes=""
+      timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
+    <wmExpression/>
   </pool>
   <documentation/>
   <qualityOfService expressPipeline="true" minLogLevel="5"

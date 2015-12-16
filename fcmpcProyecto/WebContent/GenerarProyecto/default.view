@@ -124,9 +124,10 @@
                 <property name='id' value='staticCell14' />
                 <control component-type='com.webmethods.caf.faces.input.DateInput' renderer-type='com.webmethods.caf.faces.input.DateInput'>
                   <property name='id' value='htmlInputText2' />
+                  <property name='showMonthAndYearMenus' value='true' />
                   <property name='showTime' value='false' />
                   <property name='value' value='#{GenerarProyectoDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaDesde}' />
-                  <property name='valuePattern' value='dd/MM/yyyy' />
+                  <property name='valuePattern' value='yyyy' />
                   <property name='width' value='input8' />
                 </control>
               </control>
@@ -146,7 +147,7 @@
                   <property name='id' value='htmlInputText3' />
                   <property name='showTime' value='false' />
                   <property name='value' value='#{GenerarProyectoDefaultviewView.generadorProyecto2.parameters.generadorProyecto.generadorProyecto.proyecto.fechaHasta}' />
-                  <property name='valuePattern' value='dd/MM/yyyy' />
+                  <property name='valuePattern' value='yyyy' />
                   <property name='width' value='input8' />
                 </control>
               </control>

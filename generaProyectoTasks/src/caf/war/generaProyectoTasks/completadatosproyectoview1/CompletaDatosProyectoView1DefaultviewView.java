@@ -251,12 +251,6 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 		{"#{leeTablaProfesional.autoRefresh}", "true"},
 	};
 	private transient com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider solucionProvider5 = null;
-	private static final String[][] SOLUCIONPROVIDER5_PROPERTY_BINDINGS = new String[][] {
-		{"#{SolucionProvider5.rowVariable}", "solucion"},
-		{"#{SolucionProvider5.valueBinding}", "#{solucion.campo}"},
-		{"#{SolucionProvider5.labelBinding}", "#{solucion.campo}"},
-		{"#{SolucionProvider5.array}", "#{CompletaDatosProyectoView1DefaultviewView.leeTablaProfesional.result.leeTablaProfesionalResponse.rtabla.solucion}"},
-	};
 	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablaencargado_wsd.LeeTablaEncargado2 leeTablaEncargado2 = null;
 	private static final String[][] LEETABLAENCARGADO2_PROPERTY_BINDINGS = new String[][] {
 		{"#{leeTablaEncargado2.authCredentials.authenticationMethod}", "1"},
@@ -312,6 +306,12 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 	private static final String[][] PROFESIONALESPROVIDER2_PROPERTY_BINDINGS = new String[][] {
 		{"#{ProfesionalesProvider2.rowType}", "java.lang.String"},
 		{"#{ProfesionalesProvider2.rowVariable}", "profesionale"},
+	};
+	private static final String[][] SOLUCIONPROVIDER5_PROPERTY_BINDINGS = new String[][] {
+		{"#{solucionProvider5.rowVariable}", "solucion"},
+		{"#{solucionProvider5.valueBinding}", "#{solucion.valor}"},
+		{"#{solucionProvider5.labelBinding}", "#{solucion.valor}"},
+		{"#{solucionProvider5.array}", "#{CompletaDatosProyectoView1DefaultviewView.leeTablaProfesional.result.leeTablaProfesionalResponse.rtabla.solucion}"},
 	};
 	/**
 	 * Initialize page

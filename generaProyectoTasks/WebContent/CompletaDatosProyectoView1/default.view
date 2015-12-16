@@ -179,6 +179,7 @@
                       <control component-type='com.webmethods.caf.faces.table.AddRowButton' renderer-type='com.webmethods.caf.faces.table.AddRowButton'>
                         <property name='id' value='addRowButton' />
                         <property name='label' value='Agregar' />
+                        <property name='width' value='button6' />
                       </control>
                     </facet>
                     <facet name='footer'>
@@ -221,6 +222,7 @@
                       <control component-type='com.webmethods.caf.faces.table.RemoveRowButton' renderer-type='com.webmethods.caf.faces.table.RemoveRowButton'>
                         <property name='id' value='removeRowButton' />
                         <property name='label' value='Eliminar' />
+                        <property name='width' value='button6' />
                       </control>
                     </control>
                   </control>
@@ -277,11 +279,12 @@
                         <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
                           <property name='id' value='htmlOutputText' />
                           <property name='raw' value='true' />
-                          <property name='value' value='Establecimientos Provider 3' />
+                          <property name='value' value='Establecimientos' />
                         </control>
                         <control component-type='com.webmethods.caf.faces.table.AddRowButton' renderer-type='com.webmethods.caf.faces.table.AddRowButton'>
                           <property name='id' value='addRowButton' />
                           <property name='label' value='Agregar' />
+                          <property name='width' value='button6' />
                         </control>
                       </control>
                     </facet>
@@ -350,11 +353,12 @@
                                     <property name='id' value='htmlOutputText' />
                                     <property name='raw' value='true' />
                                     <property name='rendered' value='false' />
-                                    <property name='value' value='Profesionales Provider 2' />
+                                    <property name='value' value='Profesionales' />
                                   </control>
                                   <control component-type='com.webmethods.caf.faces.table.AddRowButton' renderer-type='com.webmethods.caf.faces.table.AddRowButton'>
                                     <property name='id' value='addRowButton' />
                                     <property name='label' value='Agregar' />
+                                    <property name='width' value='button6' />
                                   </control>
                                 </control>
                               </facet>
@@ -399,6 +403,7 @@
                                   <property name='id' value='removeRowButton' />
                                   <property name='label' value='Eliminar' />
                                   <property name='row' value='_this' />
+                                  <property name='width' value='button6' />
                                 </control>
                               </control>
                             </control>
@@ -412,6 +417,7 @@
                         <property name='id' value='removeRowButton' />
                         <property name='label' value='Eliminar' />
                         <property name='row' value='_this' />
+                        <property name='width' value='button6' />
                       </control>
                     </control>
                   </control>
@@ -441,11 +447,13 @@
     <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
       <design-time-attribute name='rolledUp' value='true' />
       <property name='for' value=':taskViewForm:optionalPanel' />
+      <property name='rendered' value='false' />
       <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.toggle.task.info&quot;]}' />
     </control>
     <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
       <design-time-attribute name='rolledUp' value='true' />
       <property name='id' value='optionalPanel' />
+      <property name='rendered' value='false' />
       <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
         <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.task.info&quot;]}' />
         <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
@@ -557,12 +565,12 @@
       </control>
     </control>
     <control component-type='com.webmethods.caf.faces.panel.PropertySubmit' renderer-type='com.webmethods.caf.faces.panel.PropertySubmit'>
-      <design-time-attribute name='rolledUp' value='true' />
+      <design-time-attribute name='rolledUp' value='false' />
       <facet name='submit'>
         <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
           <property name='action' value='#{CompletaDatosProyectoView1DefaultviewView.submitTask}' signature='java.lang.String action()' />
           <property name='disabled' value='#{not CompletaDatosProyectoView1DefaultviewView.taskDisplayProvider.activeStatus}' />
-          <property name='rendered' value='#{CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.autoAccept || CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.taskInfo.currentUserAccepted}' />
+          <property name='rendered' value='false' />
           <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.submit&quot;]}' />
         </control>
       </facet>
@@ -570,14 +578,15 @@
         <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
           <property name='action' value='#{CompletaDatosProyectoView1DefaultviewView.cancelView}' signature='java.lang.String action()' />
           <property name='rendered' value='#{not empty activePreferencesBean.finishUrl}' />
-          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.return&quot;]}' />
+          <property name='value' value='Volver' />
+          <property name='width' value='button9' />
         </control>
       </facet>
       <facet name='previous'>
         <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
           <property name='action' value='#{CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.acceptTask}' signature='java.lang.String action()' />
           <property name='disabled' value='#{not CompletaDatosProyectoView1DefaultviewView.taskDisplayProvider.activeStatus}' />
-          <property name='rendered' value='#{!CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.autoAccept &amp;&amp; !CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.taskInfo.currentUserAccepted}' />
+          <property name='rendered' value='false' />
           <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.accept&quot;]}' />
         </control>
       </facet>
@@ -585,7 +594,7 @@
         <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
           <property name='action' value='#{CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.unacceptTask}' signature='java.lang.String action()' />
           <property name='disabled' value='#{not CompletaDatosProyectoView1DefaultviewView.taskDisplayProvider.activeStatus}' />
-          <property name='rendered' value='#{!CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.autoAccept &amp;&amp; CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.taskInfo.currentUserAccepted}' />
+          <property name='rendered' value='false' />
           <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.release&quot;]}' />
         </control>
       </facet>
@@ -593,13 +602,14 @@
         <property name='action' value='#{CompletaDatosProyectoView1DefaultviewView.completeTask}' signature='java.lang.String action()' />
         <property name='disabled' value='#{not CompletaDatosProyectoView1DefaultviewView.taskDisplayProvider.activeStatus}' />
         <property name='rendered' value='#{CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.autoAccept || CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.taskInfo.currentUserAccepted}' />
-        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.complete&quot;]}' />
+        <property name='value' value='Grabar y Enviar' />
+        <property name='width' value='button9' />
       </control>
       <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
         <property name='disabled' value='#{not CompletaDatosProyectoView1DefaultviewView.taskDisplayProvider.activeStatus}' />
         <property name='for' value=':assignToForm:assignedPrincipalPicker' />
         <property name='id' value='toggleAssignedPrincipalPicker' />
-        <property name='rendered' value='#{CompletaDatosProyectoView1DefaultviewView.completaDatosProyecto2.adhocRouting}' />
+        <property name='rendered' value='false' />
         <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.assign.users&quot;]}' />
         <property name='way' value='show' />
       </control>

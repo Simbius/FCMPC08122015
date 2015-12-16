@@ -80,10 +80,84 @@
               <property name='id' value='staticRow8' />
               <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
                 <property name='id' value='staticCell12' />
-                <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <control component-type='com.webmethods.caf.faces.SelectOneMenu' renderer-type='com.webmethods.caf.faces.Menu'>
+                  <property name='disabledClass' value='disabled' />
+                  <property name='enabledClass' value='enabled' />
                   <property name='id' value='htmlInputText1' />
-                  <property name='value' value='#{CrearProyectoDefaultviewView.generadorProyecto3.parameters.generadorProyecto.generadorProyecto.proyecto.periodo}' />
+                  <property name='value' value='#{CrearProyectoDefaultviewView.desde}' />
                   <property name='width' value='input10' />
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem' />
+                    <property name='itemValue' value='2015' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem1' />
+                    <property name='itemValue' value='2016' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem2' />
+                    <property name='itemValue' value='2017' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem3' />
+                    <property name='itemValue' value='2018' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem4' />
+                    <property name='itemValue' value='2019' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem102' />
+                    <property name='itemValue' value='2020' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem5' />
+                  </control>
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+                <property name='id' value='staticCell' />
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText' />
+                  <property name='raw' value='true' />
+                  <property name='value' value=' ' />
+                </control>
+              </control>
+              <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+                <property name='id' value='staticCell121' />
+                <control component-type='com.webmethods.caf.faces.SelectOneMenu' renderer-type='com.webmethods.caf.faces.Menu'>
+                  <property name='disabledClass' value='disabled' />
+                  <property name='enabledClass' value='enabled' />
+                  <property name='id' value='htmlInputText11' />
+                  <property name='value' value='#{CrearProyectoDefaultviewView.hasta}' />
+                  <property name='width' value='input10' />
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem6' />
+                    <property name='itemValue' value='2015' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem7' />
+                    <property name='itemValue' value='2016' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem8' />
+                    <property name='itemValue' value='2017' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem9' />
+                    <property name='itemValue' value='2018' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem10' />
+                    <property name='itemValue' value='2019' />
+                  </control>
+                   <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem110' />
+                    <property name='itemValue' value='2020' />
+                  </control>
+                  <control component-type='javax.faces.SelectItem' renderer-type=''>
+                    <property name='id' value='selectItem11' />
+                  </control>
                 </control>
               </control>
             </control>
@@ -118,6 +192,43 @@
         <property name='id' value='staticRow14' />
         <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
           <property name='id' value='staticCell19' />
+          <control component-type='com.webmethods.caf.faces.panel.ModalDialog' renderer-type='com.webmethods.caf.faces.panel.ModalDialog'>
+            <property name='id' value='modalDialog' />
+            <facet name='title'>
+              <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                <property name='id' value='htmlOutputText1' />
+                <property name='raw' value='true' />
+                <property name='value' value='Generar nuevo Proyecto' />
+              </control>
+            </facet>
+            <facet name='submit'>
+              <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+                <property name='action' value='#{CrearProyectoDefaultviewView.actionProcesa}' signature='java.lang.String action()' />
+                <property name='id' value='button' />
+                <property name='value' value='Aceptar' />
+              </control>
+            </facet>
+            <facet name='cancel'>
+              <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+                <property name='for' value='modalDialog' />
+                <property name='id' value='oneWayToggleButton' />
+                <property name='value' value='Cancelar' />
+              </control>
+            </facet>
+            <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+              <property name='id' value='staticRow' />
+              <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+                <property name='align' value='center' />
+                <property name='id' value='staticCell2' />
+                <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+                  <property name='id' value='htmlOutputText2' />
+                  <property name='raw' value='true' />
+                  <property name='styleClass' value='portlet-msg-success' />
+                  <property name='value' value='#{CrearProyectoDefaultviewView.resultado}' />
+                </control>
+              </control>
+            </control>
+          </control>
         </control>
       </control>
       <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
@@ -125,19 +236,10 @@
         <property name='id' value='staticRow3' />
         <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
           <property name='id' value='staticCell3' />
-          <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
-            <property name='action' value='#{CrearProyectoDefaultviewView.generadorProyecto3.refresh}' signature='java.lang.String action()' />
-            <property name='id' value='button1' />
+          <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+            <property name='for' value='defaultForm:modalDialog' />
+            <property name='id' value='oneWayToggleButton1' />
             <property name='value' value='Crear' />
-          </control>
-          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
-            <property name='id' value='propertyLine16' />
-            <property name='label' value='  ' />
-            <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
-              <property name='id' value='htmlOutputText8' />
-              <property name='raw' value='true' />
-              <property name='value' value='#{GenerarProyectoDefaultviewView.generadorProyecto2.result.generadorProyectoResponse.resultado.msg}' />
-            </control>
           </control>
         </control>
       </control>

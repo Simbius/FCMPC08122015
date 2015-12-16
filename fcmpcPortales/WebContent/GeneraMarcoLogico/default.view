@@ -9,6 +9,19 @@
   <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
     <property name='defaultFocus' value='_first' />
     <property name='id' value='defaultForm' />
+    <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+      <property name='id' value='staticRow20' />
+      <property name='width' value='410px' />
+      <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+        <property name='id' value='staticCell23' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlOutputText16' />
+          <property name='raw' value='true' />
+          <property name='rendered' value='false' />
+          <property name='value' value='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' />
+        </control>
+      </control>
+    </control>
     <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PageGroup'>
       <property name='id' value='pageGroup' />
       <property name='label' value='Genera Marco Logico' />
@@ -1922,6 +1935,19 @@
             <property name='id' value='button' />
             <property name='value' value='Procesa' />
           </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+      <property name='id' value='staticRow201' />
+      <property name='width' value='410px' />
+      <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+        <property name='id' value='staticCell231' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlOutputText161' />
+          <property name='raw' value='true' />
+          <property name='rendered' value='false' />
+          <property name='value' value='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' />
         </control>
       </control>
     </control>
