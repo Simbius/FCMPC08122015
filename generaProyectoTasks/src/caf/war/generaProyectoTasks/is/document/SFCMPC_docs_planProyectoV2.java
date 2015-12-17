@@ -11,6 +11,9 @@ public  class SFCMPC_docs_planProyectoV2 extends java.lang.Object implements Ser
 	private static final long serialVersionUID = 1L;
 	// IS Document type used to generate this class
 	public static final String DOCUMENT_TYPE = "sFCMPC.docs:planProyectoV2";
+	// Used by Designer to access the source document.
+	@SuppressWarnings("unused")
+	private static final String DOCUMENT_SRC = "http://172.16.58.129:5555";
 	public static String[][] FIELD_NAMES = new String[][] {{"planProyecto", "planProyecto"},
 	};
 	private caf.war.generaProyectoTasks.is.document.SFCMPC_docs_planProyectoV2.PlanProyecto planProyecto = null;

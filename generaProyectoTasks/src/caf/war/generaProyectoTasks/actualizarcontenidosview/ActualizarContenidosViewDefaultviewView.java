@@ -173,9 +173,6 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 		return null;
 	}
 	
-	private static final String[][] INITIALIZE_PROPERTY_BINDINGS = new String[][] {
-		{"#{ActualizarContenidos.reset}", null}
-	};
 	private transient caf.war.generaProyectoTasks.actualizarcontenidosview.ActualizarContenidosView actualizarContenidosView = null;
 	private caf.war.generaProyectoTasks.taskclient.ActualizarContenidos actualizarContenidos = null;
 	private static final String[][] ACTUALIZARCONTENIDOS_PROPERTY_BINDINGS = new String[][] {
@@ -184,12 +181,101 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 		{"#{ActualizarContenidos.adhocRouting}", "false"},
 	};
 	private java.lang.String indicador;
-
+	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.DummyProyectos dummyProyectos = null;
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivoProvider = null;
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider osupuestosProvider = null;
+	private static final String[][] OSUPUESTOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{OsupuestosProvider.rowType}", "java.lang.String"},
+		{"#{OsupuestosProvider.rowVariable}", "osupuesto"},
+	};
+	private static final String[][] OBJETIVOPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{objetivoProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Objetivo"},
+		{"#{objetivoProvider.rowVariable}", "objetivo"},
+		{"#{objetivoProvider.osupuestos}", "#{ActualizarContenidosViewDefaultviewView.osupuestosProvider.array}"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivosEspecificosProvider = null;
+	private static final String[][] OBJETIVOSESPECIFICOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{ObjetivosEspecificosProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$ObjetivosEspecificos"},
+		{"#{ObjetivosEspecificosProvider.rowVariable}", "objetivosEspecifico"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider especificosProvider = null;
+	private static final String[][] ESPECIFICOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{EspecificosProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Especificos"},
+		{"#{EspecificosProvider.rowVariable}", "especifico"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider rsupuestosProvider = null;
+	private static final String[][] RSUPUESTOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{RsupuestosProvider.rowType}", "java.lang.String"},
+		{"#{RsupuestosProvider.rowVariable}", "rsupuesto"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider estrategiaProvider = null;
+	private static final String[][] ESTRATEGIAPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{EstrategiaProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Estrategia"},
+		{"#{EstrategiaProvider.rowVariable}", "estrategia"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider tipoParticipanteProvider = null;
+	private static final String[][] TIPOPARTICIPANTEPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{TipoParticipanteProvider.rowType}", "java.lang.String"},
+		{"#{TipoParticipanteProvider.rowVariable}", "tipoParticipante"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider cicloProvider = null;
+	private static final String[][] CICLOPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{CicloProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Ciclo"},
+		{"#{CicloProvider.rowVariable}", "ciclo"},
+	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivosXactividadProvider = null;
+	private static final String[][] OBJETIVOSXACTIVIDADPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{ObjetivosXactividadProvider.rowType}", "java.lang.String"},
+		{"#{ObjetivosXactividadProvider.rowVariable}", "objetivosXactividad"},
+	};
+	private static final String[][] DUMMYPROYECTOS_PROPERTY_BINDINGS = new String[][] {
+		{"#{dummyProyectos.authCredentials.authenticationMethod}", "1"},
+		{"#{dummyProyectos.authCredentials.requiresAuth}", "true"},
+		{"#{dummyProyectos.autoRefresh}", "false"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivo}", "#{ActualizarContenidosViewDefaultviewView.objetivoProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos}", "#{ActualizarContenidosViewDefaultviewView.objetivosEspecificosProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.especificos}", "#{ActualizarContenidosViewDefaultviewView.especificosProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.especificos.especifico.rsupuestos}", "#{ActualizarContenidosViewDefaultviewView.rsupuestosProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia}", "#{ActualizarContenidosViewDefaultviewView.estrategiaProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.tipoParticipante}", "#{ActualizarContenidosViewDefaultviewView.tipoParticipanteProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.ciclo}", "#{ActualizarContenidosViewDefaultviewView.cicloProvider.array}"},
+		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.objetivosXactividad}", "#{ActualizarContenidosViewDefaultviewView.objetivosXactividadProvider.array}"},
+	};
+	private static final String[][] INITIALIZE_PROPERTY_BINDINGS = new String[][] {
+		{"#{ActualizarContenidosViewDefaultviewView.dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2}", "#{ActualizarContenidosViewDefaultviewView.actualizarContenidos.taskData.planProyectoV2.planProyecto.marcoLogicoV2}"},
+	};
+	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablakpis_wsd.LeeTablaKpis leeTablaKpis = null;
+	private transient com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider solucionProvider8 = null;
+	private static final String[][] LEETABLAKPIS_PROPERTY_BINDINGS = new String[][] {
+		{"#{leeTablaKpis.authCredentials.authenticationMethod}", "1"},
+		{"#{leeTablaKpis.authCredentials.requiresAuth}", "true"},
+		{"#{leeTablaKpis.autoRefresh}", "true"},
+	};
+	private static final String[][] SOLUCIONPROVIDER8_PROPERTY_BINDINGS = new String[][] {
+		{"#{solucionProvider8.rowVariable}", "solucion"},
+		{"#{solucionProvider8.valueBinding}", "#{solucion.valor}"},
+		{"#{solucionProvider8.labelBinding}", "#{solucion.valor}"},
+		{"#{solucionProvider8.array}", "#{ActualizarContenidosViewDefaultviewView.leeTablaKpis.result.leeTablaKpisResponse.rtabla.solucion}"},
+	};
+	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablamv_wsd.LeeTablaMV leeTablaMV = null;
+	private static final String[][] LEETABLAMV_PROPERTY_BINDINGS = new String[][] {
+		{"#{leeTablaMV.authCredentials.authenticationMethod}", "1"},
+		{"#{leeTablaMV.authCredentials.requiresAuth}", "true"},
+		{"#{leeTablaMV.autoRefresh}", "true"},
+	};
+	private transient com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider solucionProvider9 = null;
+	private static final String[][] SOLUCIONPROVIDER9_PROPERTY_BINDINGS = new String[][] {
+		{"#{SolucionProvider9.rowVariable}", "solucion"},
+		{"#{SolucionProvider9.valueBinding}", "#{solucion.campo}"},
+		{"#{SolucionProvider9.labelBinding}", "#{solucion.campo}"},
+		{"#{SolucionProvider9.array}", "#{ActualizarContenidosViewDefaultviewView.leeTablaMV.result.leeTablaMVResponse.rtabla.solucion}"},
+	};
 	/**
 	 * Initialize page
 	 */
 	public String initialize() {
 		try {
+			this.setIndicador("0");
 		    resolveDataBinding(INITIALIZE_PROPERTY_BINDINGS, null, "initialize", true, false);
 		} catch (Exception e) {
 			error(e);
@@ -231,6 +317,146 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 
 	public void setIndicador(java.lang.String indicador)  {
 		this.indicador = indicador;
+	}
+
+
+	public caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.DummyProyectos getDummyProyectos()  {
+		if (dummyProyectos == null) {
+		    dummyProyectos = (caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.DummyProyectos)resolveExpression("#{DummyProyectos}");
+		}
+	
+	    resolveDataBinding(DUMMYPROYECTOS_PROPERTY_BINDINGS, dummyProyectos, "dummyProyectos", false, false);
+		return dummyProyectos;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getObjetivoProvider()  {
+		if (objetivoProvider == null) {
+		    objetivoProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{ObjetivoProvider}");
+		}
+	
+	    resolveDataBinding(OBJETIVOPROVIDER_PROPERTY_BINDINGS, objetivoProvider, "objetivoProvider", false, false);
+		return objetivoProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getOsupuestosProvider()  {
+		if (osupuestosProvider == null) {
+		    osupuestosProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{OsupuestosProvider}");
+		}
+	
+	    resolveDataBinding(OSUPUESTOSPROVIDER_PROPERTY_BINDINGS, osupuestosProvider, "osupuestosProvider", false, false);
+		return osupuestosProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getObjetivosEspecificosProvider()  {
+		if (objetivosEspecificosProvider == null) {
+		    objetivosEspecificosProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{ObjetivosEspecificosProvider}");
+		}
+	
+	    resolveDataBinding(OBJETIVOSESPECIFICOSPROVIDER_PROPERTY_BINDINGS, objetivosEspecificosProvider, "objetivosEspecificosProvider", false, false);
+		return objetivosEspecificosProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getEspecificosProvider()  {
+		if (especificosProvider == null) {
+		    especificosProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{EspecificosProvider}");
+		}
+	
+	    resolveDataBinding(ESPECIFICOSPROVIDER_PROPERTY_BINDINGS, especificosProvider, "especificosProvider", false, false);
+		return especificosProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getRsupuestosProvider()  {
+		if (rsupuestosProvider == null) {
+		    rsupuestosProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{RsupuestosProvider}");
+		}
+	
+	    resolveDataBinding(RSUPUESTOSPROVIDER_PROPERTY_BINDINGS, rsupuestosProvider, "rsupuestosProvider", false, false);
+		return rsupuestosProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getEstrategiaProvider()  {
+		if (estrategiaProvider == null) {
+		    estrategiaProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{EstrategiaProvider}");
+		}
+	
+	    resolveDataBinding(ESTRATEGIAPROVIDER_PROPERTY_BINDINGS, estrategiaProvider, "estrategiaProvider", false, false);
+		return estrategiaProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getTipoParticipanteProvider()  {
+		if (tipoParticipanteProvider == null) {
+		    tipoParticipanteProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{TipoParticipanteProvider}");
+		}
+	
+	    resolveDataBinding(TIPOPARTICIPANTEPROVIDER_PROPERTY_BINDINGS, tipoParticipanteProvider, "tipoParticipanteProvider", false, false);
+		return tipoParticipanteProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getCicloProvider()  {
+		if (cicloProvider == null) {
+		    cicloProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{CicloProvider}");
+		}
+	
+	    resolveDataBinding(CICLOPROVIDER_PROPERTY_BINDINGS, cicloProvider, "cicloProvider", false, false);
+		return cicloProvider;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getObjetivosXactividadProvider()  {
+		if (objetivosXactividadProvider == null) {
+		    objetivosXactividadProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{ObjetivosXactividadProvider}");
+		}
+	
+	    resolveDataBinding(OBJETIVOSXACTIVIDADPROVIDER_PROPERTY_BINDINGS, objetivosXactividadProvider, "objetivosXactividadProvider", false, false);
+		return objetivosXactividadProvider;
+	}
+
+
+	public caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablakpis_wsd.LeeTablaKpis getLeeTablaKpis()  {
+		if (leeTablaKpis == null) {
+		    leeTablaKpis = (caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablakpis_wsd.LeeTablaKpis)resolveExpression("#{LeeTablaKpis}");
+		}
+	
+	    resolveDataBinding(LEETABLAKPIS_PROPERTY_BINDINGS, leeTablaKpis, "leeTablaKpis", false, false);
+		return leeTablaKpis;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider getSolucionProvider8()  {
+		if (solucionProvider8 == null) {
+		    solucionProvider8 = (com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider)resolveExpression("#{SolucionProvider8}");
+		}
+	
+	    resolveDataBinding(SOLUCIONPROVIDER8_PROPERTY_BINDINGS, solucionProvider8, "solucionProvider8", false, false);
+		return solucionProvider8;
+	}
+
+
+	public caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablamv_wsd.LeeTablaMV getLeeTablaMV()  {
+		if (leeTablaMV == null) {
+		    leeTablaMV = (caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablamv_wsd.LeeTablaMV)resolveExpression("#{LeeTablaMV}");
+		}
+	
+	    resolveDataBinding(LEETABLAMV_PROPERTY_BINDINGS, leeTablaMV, "leeTablaMV", false, false);
+		return leeTablaMV;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider getSolucionProvider9()  {
+		if (solucionProvider9 == null) {
+		    solucionProvider9 = (com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider)resolveExpression("#{SolucionProvider9}");
+		}
+	
+	    resolveDataBinding(SOLUCIONPROVIDER9_PROPERTY_BINDINGS, solucionProvider9, "solucionProvider9", false, false);
+		return solucionProvider9;
 	}
 	
 	

@@ -191,9 +191,10 @@ public  class SFCMPC_docs_marcoLogicoV2 extends java.lang.Object implements Seri
 		private java.lang.String olineaBase;
 		private java.lang.String oano1;
 		private java.lang.String oano2;
-		public static String[][] FIELD_NAMES = new String[][] {{"oindicador", "oindicador"},{"omv", "omv"},{"ovalor", "ovalor"},{"olineaBase", "olineaBase"},{"oano1", "oano1"},{"oano2", "oano2"},{"osupuestos", "osupuestos"},
-		};
 		private java.lang.String[] osupuestos = null;
+		public static String[][] FIELD_NAMES = new String[][] {{"oindicador", "oindicador"},{"omv", "omv"},{"ovalor", "ovalor"},{"olineaBase", "olineaBase"},{"oano1", "oano1"},{"oano2", "oano2"},{"osupuestos", "osupuestos"},{"oset", "oset"},
+		};
+		private java.lang.String oset;
 		
 	
 		public Objetivo() {
@@ -276,6 +277,17 @@ public  class SFCMPC_docs_marcoLogicoV2 extends java.lang.Object implements Seri
 
 		public void setOsupuestos(java.lang.String[] osupuestos)  {
 			this.osupuestos = osupuestos;
+		}
+
+
+		public java.lang.String getOset()  {
+			
+			return oset;
+		}
+
+
+		public void setOset(java.lang.String oset)  {
+			this.oset = oset;
 		}
 	
 	}
@@ -575,9 +587,11 @@ public  class SFCMPC_docs_marcoLogicoV2 extends java.lang.Object implements Seri
 				private static final long serialVersionUID = 1L;
 				private java.lang.String periodo;
 				private java.lang.String sesiones;
-				public static String[][] FIELD_NAMES = new String[][] {{"periodo", "periodo"},{"sesiones", "sesiones"},{"cantidadHoras", "cantidadHoras"},
-				};
 				private java.lang.String cantidadHoras;
+				private java.lang.String dateIni;
+				public static String[][] FIELD_NAMES = new String[][] {{"periodo", "periodo"},{"sesiones", "sesiones"},{"cantidadHoras", "cantidadHoras"},{"dateIni", "dateIni"},{"dateFin", "dateFin"},
+				};
+				private java.lang.String dateFin;
 				
 			
 				public Ciclo() {
@@ -614,6 +628,28 @@ public  class SFCMPC_docs_marcoLogicoV2 extends java.lang.Object implements Seri
 
 				public void setCantidadHoras(java.lang.String cantidadHoras)  {
 					this.cantidadHoras = cantidadHoras;
+				}
+
+
+				public java.lang.String getDateIni()  {
+					
+					return dateIni;
+				}
+
+
+				public void setDateIni(java.lang.String dateIni)  {
+					this.dateIni = dateIni;
+				}
+
+
+				public java.lang.String getDateFin()  {
+					
+					return dateFin;
+				}
+
+
+				public void setDateFin(java.lang.String dateFin)  {
+					this.dateFin = dateFin;
 				}
 			
 			}

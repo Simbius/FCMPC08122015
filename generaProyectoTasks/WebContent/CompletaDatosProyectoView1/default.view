@@ -27,6 +27,7 @@
         <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
           <property name='id' value='staticRow4' />
           <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+            <property name='height' value='12px' />
             <property name='id' value='staticCell4' />
           </control>
         </control>

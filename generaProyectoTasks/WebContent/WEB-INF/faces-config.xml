@@ -157,4 +157,122 @@
 			<property-class>java.lang.Boolean</property-class>
 			<value>true</value>
 		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ObjetivoProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>OsupuestosProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ObjetivosEspecificosProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>EspecificosProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>RsupuestosProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>EstrategiaProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>TipoParticipanteProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>CicloProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ObjetivosXactividadProvider</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.ListTableContentProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>SolucionProvider8</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>SolucionProvider9</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean></faces-config>
