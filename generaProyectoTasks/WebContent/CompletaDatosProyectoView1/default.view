@@ -438,6 +438,7 @@
         </control>
         <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
           <design-time-attribute name='rolledUp' value='false' />
+          <property name='height' value='28px' />
           <property name='id' value='staticRow3' />
           <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
             <property name='id' value='staticCell21' />

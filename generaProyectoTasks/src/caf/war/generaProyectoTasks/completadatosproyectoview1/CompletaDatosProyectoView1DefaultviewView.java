@@ -8,15 +8,24 @@ package caf.war.generaProyectoTasks.completadatosproyectoview1;
  *
  */
 
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.Objetivo;
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.ObjetivosEspecificos;
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.ObjetivosEspecificos.Especificos;
+
 import com.webmethods.caf.faces.data.dir.PrincipalModel;
 import com.webmethods.caf.faces.data.dir.PrincipalModelList;
 import com.webmethods.caf.faces.data.task.impl.TaskContentProvider;
 
 
+
+
+
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
 import com.webmethods.caf.faces.annotations.ExpireWithPageFlow;
 import com.webmethods.caf.faces.annotations.DTManagedBean;
 import com.webmethods.caf.faces.annotations.BeanType;
@@ -75,6 +84,7 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 	 */
 	public String completeTask() {
 		String seguimiento = "Uno";
+		this.actionIntegraLogico();
 		try {
 			if( !getCompletaDatosProyecto2().isUpdateable() ){
 				String errMsg = "You must accept a task before updating it";	//view.task.pagebean.task.accept.msg
@@ -103,6 +113,7 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 	 */
 	public String submitTask() {
 		try {
+			this.actionIntegraLogico();
 			if( !getCompletaDatosProyecto2().isUpdateable() ){
 				String errMsg = "You must accept a task before updating it";	//view.task.pagebean.task.accept.msg
 				error(errMsg);
@@ -312,6 +323,12 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 		{"#{solucionProvider5.valueBinding}", "#{solucion.valor}"},
 		{"#{solucionProvider5.labelBinding}", "#{solucion.valor}"},
 		{"#{solucionProvider5.array}", "#{CompletaDatosProyectoView1DefaultviewView.leeTablaProfesional.result.leeTablaProfesionalResponse.rtabla.solucion}"},
+	};
+	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.GetMLogico getMLogico = null;
+	private static final String[][] GETMLOGICO_PROPERTY_BINDINGS = new String[][] {
+		{"#{GetMLogico.authCredentials.authenticationMethod}", "1"},
+		{"#{GetMLogico.authCredentials.requiresAuth}", "true"},
+		{"#{GetMLogico.autoRefresh}", "false"},
 	};
 	/**
 	 * Initialize page
@@ -548,6 +565,77 @@ public class CompletaDatosProyectoView1DefaultviewView extends com.webmethods.ca
 	
 	    resolveDataBinding(PROFESIONALESPROVIDER2_PROPERTY_BINDINGS, profesionalesProvider2, "profesionalesProvider2", false, false);
 		return profesionalesProvider2;
+	}
+
+
+	public caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.GetMLogico getGetMLogico()  {
+		if (getMLogico == null) {
+		    getMLogico = (caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.GetMLogico)resolveExpression("#{GetMLogico}");
+		}
+	
+	    resolveDataBinding(GETMLOGICO_PROPERTY_BINDINGS, getMLogico, "getMLogico", false, false);
+		return getMLogico;
+	}
+
+
+	public String actionIntegraLogico() {
+	    // TODO: implement java method
+		caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2 Data =  this.completaDatosProyecto2.getTaskData().getPlanProyectoV2().getPlanProyecto().getMarcoLogicoV2();
+		this.getGetMLogico().getParameters().getGetMLogico().getGetMLogico().getEntrada().setTipoDocumento(Data.getNombrePro());
+		this.getGetMLogico().refresh();
+		caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.SFCMPCServicesGetMLogico_WSDStub.MarcoLogicoV1 MLogico = this.getGetMLogico().getResult().getGetMLogicoResponse().getMarcoLogicoV1();  
+		
+		// MLogico = this.getGetMLogico().getResult().getGetMLogicoResponse().getMarcoLogicoV1();
+		Data.setObjetivoGeneral(MLogico.getObjetivoGeneral());
+	    int indi = MLogico.getObjetivo().length;
+		
+		Objetivo[] objetivo = new Objetivo[indi];
+		
+		for (int k=0; k<indi; k++)
+		{
+			 objetivo[k] = new Objetivo();
+			objetivo[k].setOano1(MLogico.getObjetivo()[k].getOano1());
+			objetivo[k].setOano2(MLogico.getObjetivo()[k].getOano2());
+			objetivo[k].setOindicador(MLogico.getObjetivo()[k].getOindicador());
+			objetivo[k].setOlineaBase(MLogico.getObjetivo()[k].getOlineaBase());
+			objetivo[k].setOmv(MLogico.getObjetivo()[k].getOmv());
+			objetivo[k].setOset("1");
+         	objetivo[k].setOsupuestos(MLogico.getObjetivo()[k].getOsupuestos());
+			objetivo[k].setOvalor(MLogico.getObjetivo()[k].getOvalor());
+		}
+		Data.setObjetivo(objetivo);
+	   indi = MLogico.getObjetivosEspecificos().length;
+	   ObjetivosEspecificos[] objetivosEspecificos = new  ObjetivosEspecificos[indi];
+	   for (int k = 0 ; k<indi; k++)
+	   {
+		   objetivosEspecificos[k] = new ObjetivosEspecificos();
+		   objetivosEspecificos[k].setComponente(MLogico.getObjetivosEspecificos()[k].getComponente());
+		   objetivosEspecificos[k].setDescripcionObjetivo(MLogico.getObjetivosEspecificos()[k].getDescripcionObjetivo());
+		   objetivosEspecificos[k].setNombreObjetivo(MLogico.getObjetivosEspecificos()[k].getNombreObjetivo());
+		   int ki = MLogico.getObjetivosEspecificos()[k].getEspecificos().length;
+		  caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.SFCMPCServicesGetMLogico_WSDStub.Especificos[]
+				     alfa = MLogico.getObjetivosEspecificos()[k].getEspecificos();
+		   Especificos[] especificos = new Especificos[ki];
+		 //  especificos = (Especificos[]) MLogico.getObjetivosEspecificos()[k].getEspecificos();
+		   for(int r =0;r<ki;r++)
+		   {
+			especificos[r] = new Especificos();
+			especificos[r].setAno1(alfa[k].getAno1());
+			especificos[r].setAno2(alfa[k].getAno2());
+			especificos[r].setKindicador(alfa[k].getKindicador());
+			especificos[r].setLineaBase(alfa[k].getLineaBase());
+			especificos[r].setMv(alfa[k].getMv());
+			especificos[r].setRsupuestos(alfa[k].getRsupuestos());
+			especificos[r].setValor(alfa[k].getValor());
+			
+		   }
+		objetivosEspecificos[k].setEspecificos(especificos );
+		   
+	   }
+	   Data.setObjetivosEspecificos(objetivosEspecificos );
+		this.getCompletaDatosProyecto2().getTaskData().getPlanProyectoV2().getPlanProyecto().setMarcoLogicoV2(Data);
+		
+		return null;
 	}
 	
 	

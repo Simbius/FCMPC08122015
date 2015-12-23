@@ -8,15 +8,25 @@ package caf.war.generaProyectoTasks.actualizarcontenidosview;
  *
  */
 
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.Objetivo;
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.ObjetivosEspecificos;
+import caf.war.generaProyectoTasks.is.document.SFCMPC_docs_marcoLogicoV2.ObjetivosEspecificos.Especificos;
+
 import com.webmethods.caf.faces.data.dir.PrincipalModel;
 import com.webmethods.caf.faces.data.dir.PrincipalModelList;
 import com.webmethods.caf.faces.data.task.impl.TaskContentProvider;
 
 
+
+
+
+
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
 import com.webmethods.caf.faces.annotations.ExpireWithPageFlow;
 import com.webmethods.caf.faces.annotations.DTManagedBean;
 import com.webmethods.caf.faces.annotations.BeanType;
@@ -182,16 +192,10 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 	};
 	private java.lang.String indicador;
 	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.DummyProyectos dummyProyectos = null;
-	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivoProvider = null;
 	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider osupuestosProvider = null;
 	private static final String[][] OSUPUESTOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
 		{"#{OsupuestosProvider.rowType}", "java.lang.String"},
 		{"#{OsupuestosProvider.rowVariable}", "osupuesto"},
-	};
-	private static final String[][] OBJETIVOPROVIDER_PROPERTY_BINDINGS = new String[][] {
-		{"#{objetivoProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Objetivo"},
-		{"#{objetivoProvider.rowVariable}", "objetivo"},
-		{"#{objetivoProvider.osupuestos}", "#{ActualizarContenidosViewDefaultviewView.osupuestosProvider.array}"},
 	};
 	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivosEspecificosProvider = null;
 	private static final String[][] OBJETIVOSESPECIFICOSPROVIDER_PROPERTY_BINDINGS = new String[][] {
@@ -231,18 +235,7 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 	private static final String[][] DUMMYPROYECTOS_PROPERTY_BINDINGS = new String[][] {
 		{"#{dummyProyectos.authCredentials.authenticationMethod}", "1"},
 		{"#{dummyProyectos.authCredentials.requiresAuth}", "true"},
-		{"#{dummyProyectos.autoRefresh}", "false"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivo}", "#{ActualizarContenidosViewDefaultviewView.objetivoProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos}", "#{ActualizarContenidosViewDefaultviewView.objetivosEspecificosProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.especificos}", "#{ActualizarContenidosViewDefaultviewView.especificosProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.especificos.especifico.rsupuestos}", "#{ActualizarContenidosViewDefaultviewView.rsupuestosProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia}", "#{ActualizarContenidosViewDefaultviewView.estrategiaProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.tipoParticipante}", "#{ActualizarContenidosViewDefaultviewView.tipoParticipanteProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.ciclo}", "#{ActualizarContenidosViewDefaultviewView.cicloProvider.array}"},
-		{"#{dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2.objetivosEspecificos.objetivosEspecifico.estrategia.estrategia.objetivosXactividad}", "#{ActualizarContenidosViewDefaultviewView.objetivosXactividadProvider.array}"},
-	};
-	private static final String[][] INITIALIZE_PROPERTY_BINDINGS = new String[][] {
-		{"#{ActualizarContenidosViewDefaultviewView.dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2}", "#{ActualizarContenidosViewDefaultviewView.actualizarContenidos.taskData.planProyectoV2.planProyecto.marcoLogicoV2}"},
+		{"#{dummyProyectos.autoRefresh}", "false"},		
 	};
 	private transient caf.war.generaProyectoTasks.wsclient.sfcmpc.services.leetablakpis_wsd.LeeTablaKpis leeTablaKpis = null;
 	private transient com.webmethods.caf.faces.data.object.BoundPropertiesSelectItemGroupProvider solucionProvider8 = null;
@@ -270,6 +263,15 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 		{"#{SolucionProvider9.labelBinding}", "#{solucion.campo}"},
 		{"#{SolucionProvider9.array}", "#{ActualizarContenidosViewDefaultviewView.leeTablaMV.result.leeTablaMVResponse.rtabla.solucion}"},
 	};
+	private transient com.webmethods.caf.faces.data.object.ListTableContentProvider objetivoProvider = null;
+	private static final String[][] OBJETIVOPROVIDER_PROPERTY_BINDINGS = new String[][] {
+		{"#{ObjetivoProvider.rowType}", "caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub$Objetivo"},
+		{"#{ObjetivoProvider.rowVariable}", "objetivo"},
+	};
+	private static final String[][] INITIALIZE_PROPERTY_BINDINGS = new String[][] {
+		{"#{ActualizarContenidosViewDefaultviewView.dummyProyectos.parameters.dummyProyectos.dummyProyectos.entrada.marcoLogicoV2}", "#{ActualizarContenidosViewDefaultviewView.actualizarContenidos.taskData.planProyectoV2.planProyecto.marcoLogicoV2}"},
+		{"#{ActualizarContenidosViewDefaultviewView.dummyProyectos.refresh}", null},
+	};
 	/**
 	 * Initialize page
 	 */
@@ -277,6 +279,43 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 		try {
 			this.setIndicador("0");
 		    resolveDataBinding(INITIALIZE_PROPERTY_BINDINGS, null, "initialize", true, false);
+		   
+		   Objetivo[] obj = this.getActualizarContenidos().getTaskData().getPlanProyectoV2().getPlanProyecto().getMarcoLogicoV2().getObjetivo();
+		    ObjetivosEspecificos[] objs = this.getActualizarContenidos().getTaskData().getPlanProyectoV2().getPlanProyecto().getMarcoLogicoV2().getObjetivosEspecificos();
+		   
+		   String al = String.valueOf(obj.length);
+		 //  error(al);
+		   int y =obj.length;
+		   caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub.Objetivo 
+	        indicadores[] = new caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub.Objetivo[y];// [obj.length];
+		  
+	        for (int rt = 0 ; rt<y;rt++)
+		    {
+	        	indicadores[rt] = new caf.war.generaProyectoTasks.wsclient.sfcmpc.services.dummyproyectos_wsd.SFCMPCServicesDummyProyectos_WSDStub.Objetivo();
+		    	indicadores[rt].setOano1(obj[rt].getOano1());
+		    	indicadores[rt].setOano2(obj[rt].getOano2());
+		    	indicadores[rt].setOindicador(obj[rt].getOindicador());
+		    	indicadores[rt].setOlineaBase(obj[rt].getOlineaBase());
+		    	indicadores[rt].setOmv(obj[rt].getOmv());
+		    	indicadores[rt].setOset(obj[rt].getOset());
+		    	indicadores[rt].setOsupuestos(obj[rt].getOsupuestos());
+		    	indicadores[rt].setOvalor(obj[rt].getOvalor());
+		        this.getOsupuestosProvider().setArray(obj[rt].getOsupuestos());
+		    	
+		    }
+			 this.getObjetivoProvider().setArray(obj);
+			 this.getObjetivosEspecificosProvider().setArray(objs);
+			 for(int y1=0;y1<objs.length;y1++)
+			 {
+				 Especificos[] espe = this.getActualizarContenidos().getTaskData().getPlanProyectoV2().getPlanProyecto().getMarcoLogicoV2().getObjetivosEspecificos()[y1].getEspecificos();
+				 this.getEspecificosProvider().setArray(espe);
+				 for (int t=0;t<espe.length;t++)
+				 {
+					 String [] sup = this.getActualizarContenidos().getTaskData().getPlanProyectoV2().getPlanProyecto().getMarcoLogicoV2().getObjetivosEspecificos()[y1].getEspecificos()[t].getRsupuestos();
+			         this.getRsupuestosProvider().setArray(sup);
+				 }
+			 }
+			 
 		} catch (Exception e) {
 			error(e);
 			log(e);
@@ -327,16 +366,6 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 	
 	    resolveDataBinding(DUMMYPROYECTOS_PROPERTY_BINDINGS, dummyProyectos, "dummyProyectos", false, false);
 		return dummyProyectos;
-	}
-
-
-	public com.webmethods.caf.faces.data.object.ListTableContentProvider getObjetivoProvider()  {
-		if (objetivoProvider == null) {
-		    objetivoProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{ObjetivoProvider}");
-		}
-	
-	    resolveDataBinding(OBJETIVOPROVIDER_PROPERTY_BINDINGS, objetivoProvider, "objetivoProvider", false, false);
-		return objetivoProvider;
 	}
 
 
@@ -457,6 +486,16 @@ public class ActualizarContenidosViewDefaultviewView extends com.webmethods.caf.
 	
 	    resolveDataBinding(SOLUCIONPROVIDER9_PROPERTY_BINDINGS, solucionProvider9, "solucionProvider9", false, false);
 		return solucionProvider9;
+	}
+
+
+	public com.webmethods.caf.faces.data.object.ListTableContentProvider getObjetivoProvider()  {
+		if (objetivoProvider == null) {
+		    objetivoProvider = (com.webmethods.caf.faces.data.object.ListTableContentProvider)resolveExpression("#{ObjetivoProvider}");
+		}
+	
+	    resolveDataBinding(OBJETIVOPROVIDER_PROPERTY_BINDINGS, objetivoProvider, "objetivoProvider", false, false);
+		return objetivoProvider;
 	}
 	
 	

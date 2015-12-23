@@ -75,6 +75,7 @@ public class VisarMarcoLogicoyActividadesViewDefaultviewView extends com.webmeth
 	 */
 	public String completeTask() {
 		try {
+			this.getVisarMarcoLogicoyActividades().getTaskData().getPlanProyectoV2().getPlanProyecto().setAprobacion("si");
 			if( !getVisarMarcoLogicoyActividades().isUpdateable() ){
 				String errMsg = "You must accept a task before updating it";	//view.task.pagebean.task.accept.msg
 				error(errMsg);

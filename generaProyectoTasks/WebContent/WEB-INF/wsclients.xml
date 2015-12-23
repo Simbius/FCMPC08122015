@@ -55,4 +55,10 @@
 </wsproxy>
 <generatedfile>caf/war/generaProyectoTasks/wsclient/sfcmpc/services/leetablakpis_wsd/SFCMPCServicesLeeTablaKpis_WSDStub.java</generatedfile>
 </webservice>
+<webservice authenticationMethod="1" isConnectionURL="http://sgp.simbius.com:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL" isService="sFCMPC.services:getMLogico_WSD" name="getMLogico_WSD" package="caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd" password="{AES}Y5IgMqjfvkgbg7p5VUZztw==" requiresAuth="true" soapLibrary="wss" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/caf/war/generaProyectoTasks/wsclient/sfcmpc/services/getmlogico_wsd/getMLogico_WSD.wsdl" wsdlURL="http://sgp.simbius.com:5555/ws/sFCMPC.services:getMLogico_WSD?WSDL">
+<wsproxy className="caf.war.generaProyectoTasks.wsclient.sfcmpc.services.getmlogico_wsd.SFCMPCServicesGetMLogico_WSDStub">
+<wsclient managedBean="GetMLogico" operation="getMLogico"/>
+</wsproxy>
+<generatedfile>caf/war/generaProyectoTasks/wsclient/sfcmpc/services/getmlogico_wsd/SFCMPCServicesGetMLogico_WSDStub.java</generatedfile>
+</webservice>
 </wsclients>
